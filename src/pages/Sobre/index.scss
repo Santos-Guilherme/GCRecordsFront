@@ -1,0 +1,79 @@
+.Sobre {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+
+    .Content{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        width: 100%;
+    }
+    header{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+    ul{
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+    .retangulo {
+        display: flex;
+        align-self: center;
+        width: 162px;
+        height: 48px;
+    
+        background: #67117B;
+        border-radius: 20px;
+        color: #fff;
+    }
+    li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        font-family: 'Nosifer';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+
+        color: #FFFFFF;
+        list-style: none;
+        text-align: center;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .div-paragrafo {
+        display: flex;
+        flex-direction: row;
+    }
+    .login{
+        font-family: 'Nosifer';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 15px;
+    }
+    a:link {
+        color: #fff;
+     }
+     
+     a:visited {
+         color: #fff;
+     }
+     
+     a:hover {
+         color: #67117B;
+     }
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

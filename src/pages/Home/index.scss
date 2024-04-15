@@ -1,0 +1,362 @@
+.Home {
+    background-color: #000;
+    color: #fff;
+
+    .Content{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        flex-wrap: 10;
+    }
+    ul{
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+    .retangulo {
+        display: flex;
+        align-self: center;
+        width: 162px;
+        height: 48px;
+    
+        background: #67117B;
+        border-radius: 20px;
+        color: #fff;
+    }
+    li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        font-family: 'Nosifer';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+
+        color: #FFFFFF;
+        list-style: none;
+        text-align: center;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .div-paragrafo {
+        display: flex;
+        flex-direction: row;
+    }
+    .login{
+        font-family: 'Nosifer';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 15px;
+    }
+    a:link {
+        color: #fff;
+     }
+     
+     a:visited {
+         color: #fff;
+     }
+     
+     a:hover {
+         color: #67117B;
+     }
+    span{
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/*.Home {
+    background: #000;
+
+    .Body {
+        position: absolute;
+        width: 1550px;
+        height: 131px;
+        left: 22px;
+        top: 30px;
+
+        background: #000000;
+        border-radius: 25px;
+
+    }
+
+    
+    .App-logo {
+        position: absolute;
+        left: 22px;
+        top: 40px;
+        
+    }
+    
+    
+    
+    .artista {
+        position: absolute;
+        width: 162px;
+        height: 48px;
+        left: 269px;
+        top: 40px;
+        
+        font-family: 'Nosifer';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 43px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    
+    .lancamento {
+        position: absolute;
+        width: 162px;
+        height: 48px;
+        left: 500px;
+        top: 40px;
+        
+        font-family: 'Nosifer';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 43px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    
+    .shows {
+        position: absolute;
+        width: 162px;
+        height: 48px;
+        left: 800px;
+        top: 40px;
+        
+        font-family: 'Nosifer';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 43px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    
+    .sobre {
+        position: absolute;
+        width: 162px;
+        height: 48px;
+        left: 1000px;
+        top: 40px;
+        
+        font-family: 'Nosifer';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 43px;
+        
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    
+    
+    .login {
+        position: absolute;
+        width: 162px;
+        height: 48px;
+        left: 1300px;
+        top: 40px;
+        
+        font-family: 'Nosifer';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 36px;
+        
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    
+    .retangulo {
+        position: absolute;
+        width: 162px;
+        height: 48px;
+        left: 1300px;
+        top: 40px;
+        
+        background-color: #67117B;
+        border-radius: 20px;
+    }
+    
+}
+a:link {
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    color: #67117B;
+}
+
+*/
+/*
+
+
+/*
+position: absolute;
+width: 162px;
+height: 48px;
+left: 269px;
+top: 89px;
+
+font-family: 'Nosifer Caps';
+font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 43px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* G4MP3R-removebg-preview 4 *
+
+position: absolute;
+width: 182px;
+height: 147px;
+left: 30px;
+top: 45px;
+
+background: url(G4MP3R-removebg-preview.png);
+
+
+/* Lançamentos *
+
+position: absolute;
+width: 271px;
+height: 79px;
+left: 463px;
+top: 74px;
+
+font-family: 'Nosifer Caps';
+font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 43px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+shows
+
+position: absolute;
+width: 252px;
+height: 58px;
+left: 698px;
+top: 84px;
+
+font-family: 'Nosifer Caps';
+font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 43px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Sobre 
+
+position: absolute;
+width: 116px;
+height: 43px;
+left: 953px;
+top: 92px;
+
+font-family: 'Nosifer Caps';
+font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 43px;
+
+identical to box height 
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+Rectangle 12 
+
+position: absolute;
+width: 192px;
+height: 73px;
+left: 1164.5px;
+top: 72px;
+
+background: #67117B;
+border-radius: 20px;
+
+ Login 
+
+position: absolute;
+width: 194px;
+height: 36px;
+left: 1163px;
+top: 93px;
+
+font-family: 'Nosifer Caps';
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 36px;
+
+ identical to box height 
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF; 
+*/
