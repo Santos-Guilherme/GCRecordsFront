@@ -1,7 +1,5 @@
 import './index.scss';
-import '/gcrecordsfront/src/public/CSS/reset.css'
-//import logo from '/gcrecordsfront/src/public/images/GCRecords/image.jpeg';
-import '/gcrecordsfront/src/public/CSS/fonte.css';
+import logo from '../../assets/images/logo.png';
 
 import { Link } from 'react-router-dom';
 
@@ -10,7 +8,8 @@ export default function Home() {
         <div className='Home'>
             <div className='Content'>
                 <header>
-                
+                <img src={logo} className="App-logo" alt="logo" />
+
                 <ul className='lista'>
                     <li className='artista'>
                         <Link to='/Artista'> Artista</Link>

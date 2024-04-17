@@ -1,4 +1,5 @@
 import './index.scss';
+import logo from '../../assets/images/logo.png';
 
 import { Link } from 'react-router-dom';
 
@@ -6,6 +7,7 @@ export default function Lancamentos() {
     return (
         <div className='Header'>
         <header>
+            <img src={logo} className="App-logo" alt="logo" />
             <ul>
                 <li className='artista'>
                     <Link to='/Artista'> Artista</Link>

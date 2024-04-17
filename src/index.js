@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import './assets/styles/fonts.css';
+import './assets/styles/reset.css';
 import './index.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

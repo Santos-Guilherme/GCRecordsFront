@@ -1,13 +1,16 @@
 import './index.scss';
+import logo from '../../assets/images/logo.png';
+
 
 import { Link } from 'react-router-dom';
+
 
 export default function Sobre() {
     return (
         <div className='Sobre'>
             <div className='Content'>
                 <header>
-                    <img src="" className="App-logo" alt="logo" />
+                    <img src={logo} className="App-logo" alt="logo" />
                     <ul>
                         <li className='artista'>
                             <Link to='/Artista'> Artista</Link>
@@ -23,8 +26,7 @@ export default function Sobre() {
                         </li>
                     </ul>
                     <span className='retangulo'>
-                        <a className='login'>
-                            <Link to='/Login'> Login</Link>
+                        <a className='botaologin' href>Login
                         </a>
                     </span>
                 </header>
