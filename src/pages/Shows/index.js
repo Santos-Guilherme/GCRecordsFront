@@ -20,7 +20,7 @@ export default function Shows() {
             <div className='Content'>
                 <header>
                     <Link to={'/'}>
-                    <img src={imagemlogo} className="App-logo" alt="logo" />
+                        <img src={imagemlogo} className="App-logo" alt="logo" />
                     </Link>
                     <ul>
                         <li className='artista'>
@@ -50,41 +50,41 @@ export default function Shows() {
                         <div className='linha-show'>
                             <p className='show-data'>1 ago</p>
                             <div>
-                            <p>LollaPalooza Chicago</p>
+                                <p>LollaPalooza Chicago</p>
                             </div>
-                            <img src={imagemnicki} className="img-artista" alt="imagem nicki nicole"/>
+                            <img src={imagemnicki} className="img-artista" alt="imagem nicki nicole" />
                         </div>
 
                         <div className='linha-show'>
                             <p className='show-data'>19 abr</p>
                             <div>
-                            <p>Coachella</p>
+                                <p>Coachella</p>
                             </div>
-                            <img src={imagemtate} className="img-artista" alt="imagem tate mcrae"/>
+                            <img src={imagemtate} className="img-artista" alt="imagem tate mcrae" />
                         </div>
 
                         <div className='linha-show'>
                             <p className='show-data'>11 out</p>
                             <div>
-                            <p>Tomorrowland</p>
+                                <p>Tomorrowland</p>
                             </div>
-                            <img src={imagemmg} className="img-artista" alt="imagem martin garrix"/>
+                            <img src={imagemmg} className="img-artista" alt="imagem martin garrix" />
                         </div>
 
                         <div className='linha-show'>
                             <p className='show-data'>13 set</p>
                             <div>
-                            <p>Rock in Rio</p>
+                                <p>Rock in Rio</p>
                             </div>
-                            <img src={imagemveigh} className="img-artista" alt="imagem veigh"/>
+                            <img src={imagemveigh} className="img-artista" alt="imagem veigh" />
                         </div>
 
                         <div className='linha-show'>
                             <p className='show-data'>27 nov</p>
                             <div>
-                            <p>Planeta Atlantida</p>
+                                <p>Planeta Atlantida</p>
                             </div>
-                            <img src={imagemrod} className="img-artista" alt="imagem rodolfo capitão"/>
+                            <img src={imagemrod} className="img-artista" alt="imagem rodolfo capitão" />
                         </div>
                     </div>
                 </div>
@@ -93,10 +93,10 @@ export default function Shows() {
                     <div className='links-foot'>
                         <div className='container-nav-foot'>
                             <Link to={'/artista'}>
-                            <p>Artista</p>
+                                <p>Artista</p>
                             </Link>
                             <Link to={'/sobre'}>
-                            <p>Sobre</p>
+                                <p>Sobre</p>
                             </Link>
                         </div>
                         <div className='container-redes-foot'>
@@ -108,7 +108,7 @@ export default function Shows() {
                     </div>
                     <div className='container-logo-foot'>
                         <Link to={'/'}>
-                        <img src={imagemlogo} alt="logo" className='logo-foot' />
+                            <img src={imagemlogo} alt="logo" className='logo-foot' />
                         </Link>
                     </div>
                 </footer>
