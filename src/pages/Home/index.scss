@@ -7,42 +7,37 @@
     font-weight: 500;
     font-size: 20px;
 
-    .Content {
+    .Content{
         display: flex;
         flex-direction: column;
         gap: 60px;
         width: 100%;
     }
-
-    .App-logo {
+    .App-logo{
         width: 120px;
     }
-
-    header {
+    header{
         display: flex;
         flex-flow: row;
         width: 100%;
         justify-content: space-evenly;
         margin-top: 20px;
     }
-
-    ul {
+    ul{
         align-items: center;
         display: flex;
         gap: 20px;
     }
-
     .retangulo {
         display: flex;
         align-self: center;
         width: 162px;
         height: 48px;
-
+    
         background: #67117B;
         border-radius: 20px;
         color: #fff;
     }
-
     li {
         display: flex;
         flex-direction: row;
@@ -58,25 +53,32 @@
         text-align: center;
     }
 
-
-
+    .div-paragrafo {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        line-height: 35px;
+    }
     a:link {
         color: #fff;
-    }
-
+     }
+     
     a:visited {
-        color: #fff;
+         color: #fff;
     }
-
+     
     a:hover {
-        color: #67117B;
+         color: #67117B;
     }
-
-    span {
-        margin-left: 100px;
+    span{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .retangulo:hover {
+        background: #fff;
+        color: #67117B;
+        cursor: pointer;
     }
 
     .secao1>div {

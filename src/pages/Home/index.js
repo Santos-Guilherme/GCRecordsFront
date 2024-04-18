@@ -40,12 +40,11 @@ export default function Home() {
                             <Link to='/Sobre'> Sobre</Link>
                         </li>
 
-                        <span className='retangulo'>
-                            <li className='login'>
-                                <Link to='/Login'> Login</Link>
-                            </li>
-                        </span>
                     </ul>
+                    <span className='retangulo'>
+                        <a className='botaologin' href>Login
+                        </a>
+                    </span>
                 </header>
 
 
