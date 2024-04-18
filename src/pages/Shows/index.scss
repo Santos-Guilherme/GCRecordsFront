@@ -1,0 +1,115 @@
+.Shows {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    font-family: 'Nosifer';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+
+    .Content{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: 100%;
+    }
+    .App-logo{
+        width: 120px;
+    }
+    header{
+        display: flex;
+        flex-flow: row;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+    ul{
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+    .retangulo {
+        display: flex;
+        align-self: center;
+        width: 162px;
+        height: 48px;
+    
+        background: #67117B;
+        border-radius: 20px;
+        color: #fff;
+    }
+    li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #FFFFFF;
+        list-style: none;
+        text-align: center;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    a:link {
+        color: #fff;
+     }
+     
+    a:visited {
+         color: #fff;
+    }
+     
+    a:hover {
+         color: #67117B;
+    }
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .retangulo:hover {
+        background: #fff;
+        color: #67117B;
+        cursor: pointer;
+    }
+
+    .show-data {
+        width: 56px;
+        height: 58px;
+        background: #1E1D1D;
+    }
+    .linha-show {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 300px;
+    }
+    .linha-show > div {
+        flex-grow: 50px;
+        display: flex;
+        width: 200px;
+        text-align: center;
+    }
+    .shows-content {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+    h1 {
+        font-size: 55px;
+    }
+    .shows-principais {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        width: 100%;
+    }
+    .img-artista{
+        height: 150px;
+        width: 150px;
+        background-size: cover;
+        object-fit: cover;
+    }
+}
