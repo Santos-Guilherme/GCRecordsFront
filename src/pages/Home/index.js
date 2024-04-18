@@ -85,15 +85,14 @@ export default function Home() {
 
                 <div>
 
-                    <h1>Shows</h1>
-
+                    <Link to={"/Shows"} ><h1>Shows</h1> </Link>
                 </div>
 
             </div>
 
             <div className='secao3'>
                 <div>
-                    <h1>Sobre</h1>
+                    <Link to= {"/Sobre"}><h1>Sobre</h1> </Link>
                 </div>
 
             </div>
