@@ -19,7 +19,7 @@ export default function Sobre() {
         <div className='Sobre'>
             <div className='Content'>
                 <header>
-                    <img src={imagemlogo} className="App-logo" alt="logo" />
+                    <Link to='/'><img src={imagemlogo} className="App-logo" alt="logo" /></Link>
                     <ul>
                         <li className='artista'>
                             <Link to='/Artista'> Artista</Link>
@@ -66,8 +66,8 @@ export default function Sobre() {
                 <footer>
                     <div className='links-foot'>
                         <div className='container-nav-foot'>
-                            <p>Artista</p>
-                            <p>Sobre</p>
+                            <p><Link to='/Artista'> Artista</Link></p>
+                            <p><Link to='/Sobre'> Sobre</Link></p>
                         </div>
                         <div className='container-redes-foot'>
                             <div><img src={imagemInstagram} className="logo-redes" alt="logo" /><p>Instagram</p></div>
@@ -77,7 +77,7 @@ export default function Sobre() {
                         </div>
                     </div>
                     <div className='container-logo-foot'>
-                        <img src={imagemlogo} alt="logo" className='logo-foot' />
+                        <Link to='/'><img src={imagemlogo} alt="logo" className='logo-foot' /></Link>
                     </div>
                 </footer>
             </div>
