@@ -4,6 +4,12 @@ import imagemGrupo from '../../assets/images/sobre-foto-grupo.png';
 import imagemSobre1 from '../../assets/images/sobre-mc-studio.png';
 import imagemSobre2 from '../../assets/images/sobre-crianca-fone.png';
 
+import imagemInstagram from '../../assets/images/instagram.png';
+import imagemTiktok from '../../assets/images/tik-tok.png';
+import imagemTwitter from '../../assets/images/twitter.png';
+import imagemYoutube from '../../assets/images/youtube.png';
+
+
 
 import { Link } from 'react-router-dom';
 
@@ -58,7 +64,21 @@ export default function Sobre() {
                     <img src={imagemSobre2} className="Imagem-Sobre" alt="Imagem de uma criança segurando um fone de ouvido na cabeça" />
                 </div>
                 <footer>
-                    
+                    <div className='links-foot'>
+                        <div className='container-nav-foot'>
+                            <p>Artista</p>
+                            <p>Sobre</p>
+                        </div>
+                        <div className='container-redes-foot'>
+                            <div><img src={imagemInstagram} className="logo-redes" alt="logo" /><p>Instagram</p></div>
+                            <div><img src={imagemTiktok} className="logo-redes" alt="logo" /><p>Tiktok</p></div>
+                            <div><img src={imagemTwitter} className="logo-redes" alt="logo" /><p>Twitter</p></div>
+                            <div><img src={imagemYoutube} className="logo-redes" alt="logo" /><p>Youtube</p></div>
+                        </div>
+                    </div>
+                    <div className='container-logo-foot'>
+                        <img src={imagemlogo} alt="logo" className='logo-foot' />
+                    </div>
                 </footer>
             </div>
         </div>

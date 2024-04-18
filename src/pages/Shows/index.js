@@ -35,7 +35,7 @@ export default function Shows() {
                 </header>
 
                 <div className='shows-content'>
-                    <div>
+                    <div className='shows-title'>
                         <h1>Shows</h1>
                     </div>
                     <div className='shows-principais'>
