@@ -82,103 +82,38 @@ span {
     font-size: 35px;
 }
 
+.content-lista-artistas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-
-.nicki>span {
+.artista>span {
+    display: flex;
+    justify-content: space-around;
     background: rgb(62, 0, 123);
     background: linear-gradient(90deg, rgba(62, 0, 123, 1) 0%, rgba(75, 0, 150, 1) 17%, rgba(124, 5, 242, 1) 38%, rgba(124, 5, 242, 1) 58%, rgba(89, 24, 231, 1) 83%);
     color: #fff;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 25px;
-    margin: 15px;
-    
-
-    
-    
+    margin: 0px 20px;
 }
 
-.imagemnicki{
+.imagemArtista{
     margin: 10px;
     width: 259px;
     height: 246px;
-    margin-left: 790px;
     border-radius: 20px;
-    
+    object-fit: cover;
 }
 
-.tate > span {
-    background: rgb(62, 0, 123);
-    background: linear-gradient(90deg, rgba(62, 0, 123, 1) 0%, rgba(75, 0, 150, 1) 17%, rgba(124, 5, 242, 1) 38%, rgba(124, 5, 242, 1) 58%, rgba(89, 24, 231, 1) 83%);
-    color: #fff;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-top: 25px;
-    margin: 15px;
-    
-}
-
-.imagemtate {
-    margin: 10px;
-    width: 259px;
-    height: 246px;
-    margin-left: 800px;
-    border-radius: 20px;
-}
-
-.Martin > span {
-    background: rgb(62, 0, 123);
-    background: linear-gradient(90deg, rgba(62, 0, 123, 1) 0%, rgba(75, 0, 150, 1) 17%, rgba(124, 5, 242, 1) 38%, rgba(124, 5, 242, 1) 58%, rgba(89, 24, 231, 1) 83%);
-    color: #fff;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-top: 25px;
-    margin: 15px;
-    
-}
-
-.imagemmg {
-    margin: 10px;
-    width: 259px;
-    height: 246px;
-    margin-left: 750px;
-    border-radius: 20px;
-}
-
-.Veigh > span {
-    background: rgb(62, 0, 123);
-    background: linear-gradient(90deg, rgba(62, 0, 123, 1) 0%, rgba(75, 0, 150, 1) 17%, rgba(124, 5, 242, 1) 38%, rgba(124, 5, 242, 1) 58%, rgba(89, 24, 231, 1) 83%);
-    color: #fff;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-top: 25px;
-    margin: 15px;
-}
-
-.imagemveigh {
-    margin: 10px;
-    width: 259px;
-    height: 246px;
-    margin-left: 890px;
-    border-radius: 20px;
-}
-
-.Rodolfo > span {
-    background: rgb(62, 0, 123);
-    background: linear-gradient(90deg, rgba(62, 0, 123, 1) 0%, rgba(75, 0, 150, 1) 17%, rgba(124, 5, 242, 1) 38%, rgba(124, 5, 242, 1) 58%, rgba(89, 24, 231, 1) 83%);
-    color: #fff;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-top: 25px;
-    margin: 15px;
-}
-
-.imagemrod {
-    margin: 10px;
-    width: 259px;
-    height: 246px;
-    margin-left: 700px;
-    border-radius: 20px;
+span>div{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    text-wrap: nowrap;
+    text-align: center;
+    font-size: 30px;
 }
 
 footer{

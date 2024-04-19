@@ -14,14 +14,14 @@ import imagemYoutube from '../../assets/images/youtube.png';
 
 import { Link } from 'react-router-dom';
 
-export default function Artista () {
+export default function Artista() {
     return (
         <div className='Artista-home'>
-        <div className='Content'>
+            <div className='Content'>
                 <header>
 
                     <Link to={"/"}>
-                    <img src={logo} className="App-logo" alt="logo" />
+                        <img src={logo} className="App-logo" alt="logo" />
                     </Link>
 
                     <ul className='lista'>
@@ -48,48 +48,47 @@ export default function Artista () {
                     </span>
                 </header>
 
+            </div>
+
+            <div className='secao1'>
+                <h1>Artistas</h1>
+            </div>
+
+            <div className='content-lista-artistas'>
+                <div className='artista'>
+                    <span>
+                        <div><h1>Nicki Nicole</h1></div>                        
+                        <img src={imagemnicki} className="imagemArtista" alt="Nicki Nicole" />
+                    </span>
+                </div>
+                <div className='artista'>
+                    <span>
+                        <div><h1>Tate McRae</h1></div>
+                        <img src={imagemtate} className="imagemArtista" alt="Tate Mcrae" />
+                    </span>
+                </div>
+                <div className='artista'>
+                    <span>
+                        <div><h1>Martin Garrix</h1></div>
+                        <img src={imagemmg} className="imagemArtista" alt="Martin Garrix" />
+                    </span>
+                </div>
+                <div className='artista'>
+                    <span>
+                        <div><h1>Veigh</h1></div>
+                        <img src={imagemveigh} className="imagemArtista" alt="Veigh" />
+                    </span>
                 </div>
 
-        <div className='secao1'>
-            <h1>Artistas</h1>
-        </div>
+                <div className='artista'>
+                    <span>
+                        <div><h1>Rodolfo O Capitão</h1></div>
+                        <img src={imagemrod} className="imagemArtista" alt="Rodolfo O Capitão" />
+                    </span>
+                </div>
+            </div>
 
-        <div className='nicki'>
-            <span>
-            <h1>Nicki Nicole</h1>
-            <img src={imagemnicki} className="imagemnicki" alt="Nicki Nicole" />
-            </span>
-        </div>
-
-        <div className='tate'>
-            <span>
-            <h1>Tate McRae</h1>
-            <img src={imagemtate} className="imagemtate" alt="Tate Mcrae" />
-            </span>
-        </div>
-        
-
-        <div className='Martin'>
-            <span>
-            <h1>Martin Garrix</h1>
-            <img src={imagemmg} className="imagemmg" alt="Martin Garrix" />
-            </span>
-        </div>
-
-        <div className='Veigh'>
-            <span>
-            <h1>Veigh</h1>
-            <img src={imagemveigh} className="imagemveigh" alt="Veigh" />
-            </span>
-        </div>
-
-        <div className='Rodolfo'>
-            <span>
-            <h1>Rodolfo O Capitão</h1>
-            <img src={imagemrod} className="imagemrod" alt="Rodolfo O Capitão" />
-            </span>
-        </div>
-        <footer>
+            <footer>
                 <div className='links-foot'>
                     <div className='container-nav-foot'>
                         <Link to={"/Artista"}><p>Artista</p> </Link>
@@ -103,7 +102,7 @@ export default function Artista () {
                     </div>
                 </div>
                 <div className='container-logo-foot'>
-                   <Link to={"/"}> <img src={logo} alt="logo" className='logo-foot' /></Link>
+                    <Link to={"/"}> <img src={logo} alt="logo" className='logo-foot' /></Link>
                 </div>
             </footer>
         </div>
