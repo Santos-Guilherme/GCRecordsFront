@@ -44,7 +44,7 @@ export default function Sobre() {
                     <h1>Quem somos</h1>
                 </div>
                 <div className='div-paragrafo'>
-                    <p>Somos uma gravadora brasileira com foco em levar para todas as comunidades o mais alto nivel de musica e cultura.</p>
+                    <p>Somos uma gravadora brasileira com foco em levar para todas as comunidades o mais alto nível de música e cultura.</p>
                     <img src={imagemGrupo} className="Imagem-Sobre" alt="Imagem do integrantes fundadores e desenvolvedores da GCRecords" />
                 </div>
 
@@ -60,7 +60,7 @@ export default function Sobre() {
                     <h1>Impacto Social</h1>
                 </div>
                 <div className='div-paragrafo'>
-                    <p>G4MP3R Code Records disponibiliza albuns de artistas mundias e nacionais com preços acessiveis para o pessoal da quebrada.</p>
+                    <p>G4MP3R Code Records disponibiliza albuns de artistas mundias e nacionais com preços acessíveis para o pessoal da quebrada.</p>
                     <img src={imagemSobre2} className="Imagem-Sobre" alt="Imagem de uma criança segurando um fone de ouvido na cabeça" />
                 </div>
                 <footer>

@@ -47,64 +47,60 @@ export default function Artista() {
                         </a>
                     </span>
                 </header>
-
-            </div>
-
-            <div className='secao1'>
-                <h1>Artistas</h1>
-            </div>
-
-            <div className='content-lista-artistas'>
-                <div className='artista'>
-                    <span>
-                        <div><h1>Nicki Nicole</h1></div>                        
-                        <img src={imagemnicki} className="imagemArtista" alt="Nicki Nicole" />
-                    </span>
+                <div className='secao1'>
+                    <h1>Artistas</h1>
                 </div>
-                <div className='artista'>
-                    <span>
-                        <div><h1>Tate McRae</h1></div>
-                        <img src={imagemtate} className="imagemArtista" alt="Tate Mcrae" />
-                    </span>
-                </div>
-                <div className='artista'>
-                    <span>
-                        <div><h1>Martin Garrix</h1></div>
-                        <img src={imagemmg} className="imagemArtista" alt="Martin Garrix" />
-                    </span>
-                </div>
-                <div className='artista'>
-                    <span>
-                        <div><h1>Veigh</h1></div>
-                        <img src={imagemveigh} className="imagemArtista" alt="Veigh" />
-                    </span>
-                </div>
-
-                <div className='artista'>
-                    <span>
-                        <div><h1>Rodolfo O Capitão</h1></div>
-                        <img src={imagemrod} className="imagemArtista" alt="Rodolfo O Capitão" />
-                    </span>
-                </div>
-            </div>
-
-            <footer>
-                <div className='links-foot'>
-                    <div className='container-nav-foot'>
-                        <Link to={"/Artista"}><p>Artista</p> </Link>
-                        <Link to={"/Sobre"}><p>Sobre</p> </Link>
+                <div className='content-lista-artistas'>
+                    <div className='artista'>
+                        <span>
+                            <div><h1>Nicki Nicole</h1></div>
+                            <img src={imagemnicki} className="imagemArtista" alt="Nicki Nicole" />
+                        </span>
                     </div>
-                    <div className='container-redes-foot'>
-                        <div><img src={imagemInstagram} className="logo-redes" alt="logo" /><p>Instagram</p></div>
-                        <div><img src={imagemTiktok} className="logo-redes" alt="logo" /><p>Tiktok</p></div>
-                        <div><img src={imagemTwitter} className="logo-redes" alt="logo" /><p>Twitter</p></div>
-                        <div><img src={imagemYoutube} className="logo-redes" alt="logo" /><p>Youtube</p></div>
+                    <div className='artista'>
+                        <span>
+                            <div><h1>Tate McRae</h1></div>
+                            <img src={imagemtate} className="imagemArtista" alt="Tate Mcrae" />
+                        </span>
+                    </div>
+                    <div className='artista'>
+                        <span>
+                            <div><h1>Martin Garrix</h1></div>
+                            <img src={imagemmg} className="imagemArtista" alt="Martin Garrix" />
+                        </span>
+                    </div>
+                    <div className='artista'>
+                        <span>
+                            <div><h1>Veigh</h1></div>
+                            <img src={imagemveigh} className="imagemArtista" alt="Veigh" />
+                        </span>
+                    </div>
+
+                    <div className='artista'>
+                        <span>
+                            <div><h1>Rodolfo O Capitão</h1></div>
+                            <img src={imagemrod} className="imagemArtista" alt="Rodolfo O Capitão" />
+                        </span>
                     </div>
                 </div>
-                <div className='container-logo-foot'>
-                    <Link to={"/"}> <img src={logo} alt="logo" className='logo-foot' /></Link>
-                </div>
-            </footer>
+                <footer>
+                    <div className='links-foot'>
+                        <div className='container-nav-foot'>
+                            <Link to={"/Artista"}><p>Artista</p> </Link>
+                            <Link to={"/Sobre"}><p>Sobre</p> </Link>
+                        </div>
+                        <div className='container-redes-foot'>
+                            <div><img src={imagemInstagram} className="logo-redes" alt="logo" /><p>Instagram</p></div>
+                            <div><img src={imagemTiktok} className="logo-redes" alt="logo" /><p>Tiktok</p></div>
+                            <div><img src={imagemTwitter} className="logo-redes" alt="logo" /><p>Twitter</p></div>
+                            <div><img src={imagemYoutube} className="logo-redes" alt="logo" /><p>Youtube</p></div>
+                        </div>
+                    </div>
+                    <div className='container-logo-foot'>
+                        <Link to={"/"}> <img src={logo} alt="logo" className='logo-foot' /></Link>
+                    </div>
+                </footer>
+            </div>
         </div>
     );
 }

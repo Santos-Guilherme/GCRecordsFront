@@ -151,10 +151,10 @@
         width: 100%;
         justify-content: space-evenly;
     }
-    .linha-lancamentos > div {
+    .linha-lancamentos>p{
         display: flex;
         width: 200px;
-        justify-content: center;
         text-wrap: nowrap;
+        justify-content: space-evenly;
     }
 }
