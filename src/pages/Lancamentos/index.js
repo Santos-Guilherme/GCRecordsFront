@@ -1,6 +1,4 @@
 import './index.scss';
-
-import imagemlogo from '../../assets/images/logo.png';
 import alma from '../../assets/images/alma-album.jpeg';
 import dosprediosdeluxe from '../../assets/images/Dos predios deluxe.jpeg';
 import idem from '../../assets/images/idem.jpeg';
@@ -11,41 +9,14 @@ import sentio from '../../assets/images/Sentio-album.png';
 import tatemcraealbum from '../../assets/images/tatemcrae-album2.png';
 import querver from '../../assets/images/quer ver.png';
 import memaltratou from '../../assets/images/me maltratou.png';
-
-import imagemInstagram from '../../assets/images/instagram.png'
-import imagemTiktok from '../../assets/images/tik-tok.png'
-import imagemTwitter from '../../assets/images/twitter.png'
-import imagemYoutube from '../../assets/images/youtube.png'
-
-import { Link } from 'react-router-dom';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export default function Lancamentos() {
     return (
         <div className='Lancamentos'>
             <div className='Content'>
-                <header>
-                    <Link to={'/'}>
-                        <img src={imagemlogo} className="App-logo" alt="logo" />
-                    </Link>
-                    <ul>
-                        <li className='artista'>
-                            <Link to='/Artista'> Artista</Link>
-                        </li>
-                        <li className='lancamento'>
-                            <Link to='/Lancamentos'> Lançamento</Link>
-                        </li>
-                        <li className='shows'>
-                            <Link to='/Shows'> Shows</Link>
-                        </li>
-                        <li className='sobre'>
-                            <Link to='/Sobre'> Sobre</Link>
-                        </li>
-                    </ul>
-                    <span className='retangulo'>
-                        <a className='botaologin' href>Login
-                        </a>
-                    </span>
-                </header>
+                <Header></Header>
 
                 <div className='lancamentos-content'>
                     <div className='lancamentos-title'>
@@ -84,29 +55,8 @@ export default function Lancamentos() {
                         </div>
                     </div>
                 </div>
-                <footer>
-                    <div className='links-foot'>
-                        <div className='container-nav-foot'>
-                            <Link to={'/artista'}>
-                                <p>Artista</p>
-                            </Link>
-                            <Link to={'/sobre'}>
-                                <p>Sobre</p>
-                            </Link>
-                        </div>
-                        <div className='container-redes-foot'>
-                            <div><img src={imagemInstagram} className="logo-redes" alt="logo" /><p>Instagram</p></div>
-                            <div><img src={imagemTiktok} className="logo-redes" alt="logo" /><p>Tiktok</p></div>
-                            <div><img src={imagemTwitter} className="logo-redes" alt="logo" /><p>Twitter</p></div>
-                            <div><img src={imagemYoutube} className="logo-redes" alt="logo" /><p>Youtube</p></div>
-                        </div>
-                    </div>
-                    <div className='container-logo-foot'>
-                        <Link to={'/'}>
-                            <img src={imagemlogo} alt="logo" className='logo-foot' />
-                        </Link>
-                    </div>
-                </footer>
+
+                <Footer></Footer>
             </div>
         </div>
     );

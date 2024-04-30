@@ -1,0 +1,70 @@
+.Footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 90%;
+    }
+
+    .container-nav-foot {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 100px;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .links-foot {
+        display: flex;
+        gap: 40px;
+        line-height: 30px;
+        align-items: flex-start;
+    }
+
+    .container-redes-foot {
+        display: flex;
+        text-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .container-redes-foot>div {
+        display: flex;
+        align-content: center;
+        gap: 5px;
+    }
+
+    .container-logo-foot {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .logo-foot {
+        width: 300px;
+    }
+
+    .logo-redes {
+        width: 30px;
+    }
+
+    footer p:hover {
+        color: #67117B;
+        cursor: pointer;
+    }
+    a:link {
+        color: #fff;
+    }
+
+    a:visited {
+        color: #fff;
+    }
+
+    a:hover {
+        color: #67117B;
+    }
+}
