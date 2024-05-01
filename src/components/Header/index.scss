@@ -1,5 +1,7 @@
 .Header {
     width: 100%;
+    font-size: 20px;
+
     .App-logo {
         width: 120px;
     }
@@ -51,6 +53,10 @@
         line-height: 35px;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     a:link {
         color: #fff;
     }
@@ -61,6 +67,7 @@
 
     a:hover {
         color: #67117B;
+        transition: 0.2s;
     }
 
     span {
@@ -73,5 +80,6 @@
         background: #fff;
         color: #67117B;
         cursor: pointer;
+        transition: 0.5s;
     }
 }
