@@ -6,6 +6,7 @@ import imagemtate from '../../assets/images/tate mcrae (1).png'
 import imagemveigh from '../../assets/images/veigh baby (1).png'
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import LinhaShowsPrincipais from '../../components/LinhaShowsPrincipais';
 
 export default function Shows() {
     return (
@@ -18,45 +19,11 @@ export default function Shows() {
                         <h1>Shows</h1>
                     </div>
                     <div className='shows-principais'>
-                        <div className='linha-show'>
-                            <p className='show-data'>1 ago</p>
-                            <div>
-                                <p>LollaPalooza Chicago</p>
-                            </div>
-                            <img src={imagemnicki} className="img-artista" alt="imagem nicki nicole" />
-                        </div>
-
-                        <div className='linha-show'>
-                            <p className='show-data'>19 abr</p>
-                            <div>
-                                <p>Coachella</p>
-                            </div>
-                            <img src={imagemtate} className="img-artista" alt="imagem tate mcrae" />
-                        </div>
-
-                        <div className='linha-show'>
-                            <p className='show-data'>11 out</p>
-                            <div>
-                                <p>Tomorrowland</p>
-                            </div>
-                            <img src={imagemmg} className="img-artista" alt="imagem martin garrix" />
-                        </div>
-
-                        <div className='linha-show'>
-                            <p className='show-data'>13 set</p>
-                            <div>
-                                <p>Rock in Rio</p>
-                            </div>
-                            <img src={imagemveigh} className="img-artista" alt="imagem veigh" />
-                        </div>
-
-                        <div className='linha-show'>
-                            <p className='show-data'>27 nov</p>
-                            <div>
-                                <p>Planeta Atlantida</p>
-                            </div>
-                            <img src={imagemrod} className="img-artista" alt="imagem rodolfo capitão" />
-                        </div>
+                        <LinhaShowsPrincipais dataShow='1 ago' nomeShow={'LollaPalooza Chicago'} imagemArtista={imagemnicki} nomeArtista={'Nicki Nicole'}></LinhaShowsPrincipais>
+                        <LinhaShowsPrincipais dataShow='19 abr' nomeShow={'Coachella'} imagemArtista={imagemtate} nomeArtista={'Tate Mcrae'}></LinhaShowsPrincipais>
+                        <LinhaShowsPrincipais dataShow='11 out' nomeShow={'Tomorrowland'} imagemArtista={imagemmg} nomeArtista={'Martin Garrix'}></LinhaShowsPrincipais>
+                        <LinhaShowsPrincipais dataShow='13 set' nomeShow={'Rock in Rio'} imagemArtista={imagemveigh} nomeArtista={'Veigh'}></LinhaShowsPrincipais>
+                        <LinhaShowsPrincipais dataShow='27 nov' nomeShow={'Planeta Atlantida'} imagemArtista={imagemrod} nomeArtista={'Rodolfo o Capitão'}></LinhaShowsPrincipais>
                     </div>
                 </div>
 

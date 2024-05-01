@@ -10,7 +10,7 @@ import Footer from '../../components/Footer';
 export default function Home() {
     return (
         <div className='Home'>
-            <div className='Content'>
+            <div>
                 <Header></Header>
             </div>
 
@@ -31,17 +31,23 @@ export default function Home() {
 
                 </div>
             </div>
+            <div className='Content-section'>
+                <Link to={"/Shows"} >
+                    <div className='secao2'>
+                        <div>
+                            <h1>Shows</h1>
+                        </div>
+                    </div>
+                </Link>
 
-            <div className='secao2'>
-                <div>
-                    <Link to={"/Shows"} ><h1>Shows</h1> </Link>
+                <div className='secao3'>
+                    <Link to={"/Sobre"}>
+                        <div className='Sobre-div'>
+                            <h1>Sobre</h1>
+                        </div>
+                    </Link>
                 </div>
-            </div>
 
-            <div className='secao3'>
-                <div>
-                    <Link to={"/Sobre"}><h1>Sobre</h1> </Link>
-                </div>
             </div>
 
             
