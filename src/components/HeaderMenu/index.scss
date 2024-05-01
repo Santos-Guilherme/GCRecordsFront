@@ -1,0 +1,44 @@
+.HeaderMenu {
+    width: 100%;
+    margin-bottom: 40px;
+    header {
+        display: flex;
+        flex-flow: row;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .App-logo {
+        width: 120px;
+    }
+
+    .setinha {
+        width: 40px;
+        margin-left: 85px;
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .retangulo:hover {
+        background: #fff;
+        color: #67117B;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .retangulo {
+        display: flex;
+        align-self: center;
+        width: 162px;
+        height: 48px;
+        background: #67117B;
+        border-radius: 20px;
+        color: #fff;
+    }
+}

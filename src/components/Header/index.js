@@ -22,8 +22,8 @@ export default function Header() {
                     </li>
                 </ul>
                 <span className='retangulo'>
-                    <a className='botaologin' href>Login
-                    </a>
+                    <Link to='/login' className='botaologin' href>Login
+                    </Link>
                 </span>
             </header>
         </div>

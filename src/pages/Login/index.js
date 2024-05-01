@@ -41,7 +41,7 @@ export default function Home() {
 
                     
                     <div className='entrarretangulo'>
-                        <a className='botaoentrar' href=''> Entrar</a>
+                        <a className='botaoentrar' href='/'> Entrar</a>
                     </div>
 
 

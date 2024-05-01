@@ -13,6 +13,7 @@ import Sobre from './pages/Sobre';
 import Lancamentos from './pages/Lancamentos';
 import Artista from './pages/Artista';
 import Login from './pages/Login';
+import Menu from './pages/Menu';
 
 
 
@@ -28,6 +29,7 @@ root.render(
       <Route path='/lancamentos' element = {<Lancamentos />}/>
       <Route path='/artista' element = {<Artista />}/>
       <Route path='/login' element = {<Login />}/>
+      <Route path='/menu' element = {<Menu />}/>
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
