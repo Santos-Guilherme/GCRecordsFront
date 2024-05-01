@@ -2,10 +2,10 @@
     background-color: #000;
     color: #fff;
     width: 100%;
-    font-family: 'Nosifer';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
+
+    h1 {
+        font-size: 40px;
+    }
 
     .Content {
         display: flex;
@@ -14,12 +14,6 @@
         justify-content: center;
         gap: 60px;
         width: 100%;
-    }
-
-    span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .secao1 {
@@ -34,33 +28,5 @@
         justify-content: center;
         gap: 20px;
         width: 100%;
-    }
-
-    .artista>span {
-        display: flex;
-        justify-content: space-around;
-        background: rgb(62, 0, 123);
-        background: linear-gradient(90deg, rgba(62, 0, 123, 1) 0%, rgba(75, 0, 150, 1) 17%, rgba(124, 5, 242, 1) 38%, rgba(124, 5, 242, 1) 58%, rgba(89, 24, 231, 1) 83%);
-        color: #fff;
-        border-radius: 20px;
-        cursor: pointer;
-        margin: 0px 20px;
-    }
-
-    .imagemArtista {
-        margin: 10px;
-        width: 259px;
-        height: 246px;
-        border-radius: 20px;
-        object-fit: cover;
-    }
-
-    span>div {
-        display: flex;
-        justify-content: center;
-        width: 200px;
-        text-wrap: nowrap;
-        text-align: center;
-        font-size: 30px;
     }
 }

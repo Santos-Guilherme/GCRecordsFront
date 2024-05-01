@@ -14,33 +14,9 @@
         width: 100%;
     }
 
-    div {
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    .show-data {
-        width: 56px;
-        height: 58px;
-        background: #1E1D1D;
-    }
-
-    .linha-show {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-    }
-
-    .linha-show>div {
-        display: flex;
-        width: 200px;
-        justify-content: center;
-        text-wrap: nowrap;
-    }
-
     .shows-title {
         display: flex;
+        font-size: 40px;
     }
 
     .shows-content {
@@ -52,21 +28,11 @@
         gap: 30px;
     }
 
-    h1 {
-        font-size: 55px;
-    }
-
     .shows-principais {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 100px;
         width: 100%;
-    }
-
-    .img-artista {
-        height: 150px;
-        width: 150px;
-        object-fit: cover;
     }
 }

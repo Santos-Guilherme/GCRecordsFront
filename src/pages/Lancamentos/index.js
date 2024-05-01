@@ -11,6 +11,7 @@ import querver from '../../assets/images/quer ver.png';
 import memaltratou from '../../assets/images/me maltratou.png';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import QuadroLancamentosPrincipais from '../../components/QuadroLancamentosPrincipais';
 
 export default function Lancamentos() {
     return (
@@ -24,35 +25,11 @@ export default function Lancamentos() {
                     </div>
 
                     <div className='lancamentos-principais'>
-                        <div className='linha-lancamentos'>
-                            <img src={idem} className="img-album" alt="imagem album Idem - Martin Garrix" />
-                            <p>Martin Garrix</p>
-                            <img src={sentio} className="img-album" alt="imagem album Sentio - Martin Garrix" />
-                        </div>
-
-                        <div className='linha-lancamentos'>
-                            <img src={alma} className="img-album" alt="imagem album Alma - Nicki Nicole" />
-                            <p>Nicki Nicole</p>
-                            <img src={partedemi} className="img-album" alt="imagem album Parte de Mi - Nicki Nicole" />
-                        </div>
-
-                        <div className='linha-lancamentos'>
-                            <img src={querver} className="img-album" alt="imagem album Quer Ver - Rodolfo O Capitão" />
-                            <p>Rodolfo O Capitão</p>
-                            <img src={memaltratou} className="img-album" alt="imagem album Me Maltratou - Rodolfo O Capitão" />
-                        </div>
-
-                        <div className='linha-lancamentos'>
-                            <img src={thinklater} className="img-album" alt="imagem album Think Later - Tate McRae" />
-                            <p>Tate McRae</p>
-                            <img src={tatemcraealbum} className="img-album" alt="imagem album I Used To Think I Could Fly - Tate McRae" />
-                        </div>
-
-                        <div className='linha-lancamentos'>
-                            <img src={dosprediosdeluxe} className="img-album" alt="imagem album Dos Prédios Deluxe - Veigh" />
-                            <p>Veigh</p>
-                            <img src={dospredio} className="img-album" alt="imagem album Dos Prédios - Veigh" />
-                        </div>
+                        <QuadroLancamentosPrincipais lancamento1={idem} lancamento2={sentio} nomeArtista="Martin Garrix" textoLancamento1="Idem" textoLancamento2="sentio"></QuadroLancamentosPrincipais>
+                        <QuadroLancamentosPrincipais lancamento1={alma} lancamento2={partedemi} nomeArtista="Nicki Nicole" textoLancamento1="Alma" textoLancamento2="Parte de Mi"></QuadroLancamentosPrincipais>
+                        <QuadroLancamentosPrincipais lancamento1={querver} lancamento2={memaltratou} nomeArtista="Rodolfo O Capitão" textoLancamento1="Quer Ver" textoLancamento2="Me Maltratou"></QuadroLancamentosPrincipais>
+                        <QuadroLancamentosPrincipais lancamento1={thinklater} lancamento2={tatemcraealbum} nomeArtista="Tate McRae" textoLancamento1="Think Later" textoLancamento2="I Used To Think I Could Fly"></QuadroLancamentosPrincipais>
+                        <QuadroLancamentosPrincipais lancamento1={dosprediosdeluxe} lancamento2={dospredio} nomeArtista="Veigh" textoLancamento1="Dos Prédios Deluxe" textoLancamento2="Dos Prédios"></QuadroLancamentosPrincipais>
                     </div>
                 </div>
 
