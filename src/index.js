@@ -15,6 +15,9 @@ import Artista from './pages/Artista';
 import Login from './pages/Login';
 import Menu from './pages/Menu';
 import AdicionarShows from './pages/AdicionarShows';
+import MenuAlbum from './pages/MenuAlbum';
+import MenuArtista from './pages/MenuArtista';
+import MenuShows from './pages/MenuShows';
 
 
 
@@ -31,6 +34,9 @@ root.render(
       <Route path='/login' element = {<Login />}/>
       <Route path='/menu' element = {<Menu />}/>
       <Route path='/adicionarshows' element = {<AdicionarShows />}/>
+      <Route path='/menualbum' element = {<MenuAlbum />}/>
+      <Route path='/menuartista' element = {<MenuArtista />}/>
+      <Route path='/menushows' element = {<MenuShows />}/>
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

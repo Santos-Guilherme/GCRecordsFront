@@ -113,20 +113,23 @@
 
 
 
-    .entrarretangulo a:link {
+    .entrarretangulo p:link {
         color: #000;
     }
 
-    .entrarretangulo a:visited {
+    .entrarretangulo p:visited {
         color: #000;
     }
 
-    .entrarretangulo a:hover {
+    .entrarretangulo p:hover {
         color: #67117B;
     }
     
     .entrarretangulo:hover{
         background-color:#fff ;
+    }
+    .entrarretangulo p {
+        font-size: 30px;
     }
     
 }

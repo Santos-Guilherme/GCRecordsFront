@@ -1,6 +1,7 @@
 import './index.scss';
 import HeaderMenu from '../../components/HeaderMenu';
 import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
 
 export default function Menu() {
     return (
@@ -12,15 +13,15 @@ export default function Menu() {
                 <h1>Escolha a opção</h1>
 
                 <div className='retangulomenu'>
-                    <a className='botao' href='/'>Albuns</a>
+                    <Link className='botao' to='/menualbum'>Albuns</Link>
                 </div>
 
                 <div className='retangulomenu'>
-                    <a className='botao' href='/'>Shows</a>
+                    <Link className='botao' to='/menushows'>Shows</Link>
                 </div>
 
                 <div className='retangulomenu'>
-                    <a className='botao' href='/'>Artistas</a>
+                    <Link className='botao' to='/menuartista'>Artistas</Link>
                 </div>
             </div>
             </div>

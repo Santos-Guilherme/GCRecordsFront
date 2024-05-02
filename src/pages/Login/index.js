@@ -1,6 +1,7 @@
 import './index.scss';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -39,11 +40,11 @@ export default function Home() {
 
                     </div>
 
-                    
-                    <div className='entrarretangulo'>
-                        <a className='botaoentrar' href='/'> Entrar</a>
+                    <Link to='/menu' className='entrarretangulo'>
+                    <div>
+                        <p className='botaoentrar' > Entrar</p>
                     </div>
-
+                    </Link>
 
                     <h2>*Essa área é de acesso restrito somente para o proprietário da gravadora</h2>
 

@@ -17,9 +17,11 @@ export default function MenuShows() {
                         <a className='botao' href=''>Ver Shows</a>
                     </div>
 
-                    <div className='retangulomenu'>
-                        <a className='botao' href=''>Adicionar Shows</a>
+                    <Link className='retangulomenu' to='/adicionarshows'>
+                    <div>
+                        <p className='botao'>Adicionar Shows</p>
                     </div>
+                    </Link>
 
                     <div className='retangulomenu'>
                         <a className='botao' href=''>Mudar local shows</a>

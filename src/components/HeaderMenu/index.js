@@ -11,7 +11,7 @@ export default function HeaderMenu() {
                 <Link to='/'><img src={imagemlogo} className="App-logo" alt="logo" /></Link>
 
                 <span className='retangulo'>
-                    <a className='botaologin' href>Sair</a>
+                    <Link className='botaologin' to='/login'>Sair</Link>
                 </span>
             </header>
         </div>

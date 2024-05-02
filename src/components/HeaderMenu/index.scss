@@ -30,6 +30,10 @@
         color: #67117B;
         cursor: pointer;
         transition: 0.3s;
+        a {
+            color: #67117B;
+            transition: 0.2s;
+        }
     }
 
     .retangulo {
@@ -39,6 +43,18 @@
         height: 48px;
         background: #67117B;
         border-radius: 20px;
+        color: #fff;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:link {
+        color: #fff;
+    }
+
+    a:visited {
         color: #fff;
     }
 }
