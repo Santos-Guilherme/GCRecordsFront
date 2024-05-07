@@ -1,7 +1,7 @@
 import './index.scss';
 
 import Footer from '../../components/Footer';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import HeaderMenu from '../../components/HeaderMenu';
 
 export default function MenuArtista() {
@@ -14,19 +14,19 @@ export default function MenuArtista() {
                     <h1>Escolha a opção</h1>
 
                     <div className='retangulomenu'>
-                        <a className='botao' href=''>Ver Artista</a>
+                        <a className='botao' href='/'>Ver Artista</a>
                     </div>
 
                     <div className='retangulomenu'>
-                        <a className='botao' href=''>Adicionar Artista</a>
+                        <a className='botao' href='/'>Adicionar Artista</a>
                     </div>
 
                     <div className='retangulomenu'>
-                        <a className='botao' href=''>Editar artista</a>
+                        <a className='botao' href='/'>Editar artista</a>
                     </div>
 
                     <div className='retangulomenu'>
-                        <a className='botao' href=''>Excluir Artista</a>
+                        <a className='botao' href='/'>Excluir Artista</a>
                     </div>
                 </div>
             </div>

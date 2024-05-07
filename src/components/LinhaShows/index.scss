@@ -1,0 +1,40 @@
+.LinhaShows {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #000;
+
+    p {
+        display: flex;
+        width: 200px;
+        text-wrap: nowrap;
+        justify-content: space-evenly;
+        color: #fff;
+    }
+
+    .img-artista {
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+    }
+
+    .show-data {
+        width: 56px;
+        height: 58px;
+        background: #1E1D1D;
+        text-wrap: wrap;
+        
+    }
+
+    .linha-show {
+        display: flex;
+        width: 100%;
+    }
+
+    .linha-show>div {
+        display: flex;
+        width: 200px;
+    }
+}

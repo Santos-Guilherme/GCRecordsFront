@@ -7,6 +7,7 @@ import imagemveigh from '../../assets/images/veigh baby (1).png';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import MenuArtistaQuadro from '../../components/MenuArtistaQuadro';
+import { Link } from 'react-router-dom';
 
 export default function Artista() {
     return (
@@ -17,7 +18,7 @@ export default function Artista() {
                     <h1>Artistas</h1>
                 </div>
                 <div className='content-lista-artistas'>
-                    <MenuArtistaQuadro imagemArtista={imagemnicki} textoImagem='Nicki Nicole' nomeArtista={'Nicki Nicole'}></MenuArtistaQuadro>
+                    <Link to='/artista'><MenuArtistaQuadro imagemArtista={imagemnicki} textoImagem='Nicki Nicole' nomeArtista={'Nicki Nicole'}></MenuArtistaQuadro></Link>
                     <MenuArtistaQuadro imagemArtista={imagemtate} textoImagem='Tate McRae' nomeArtista={'Tate McRae'}></MenuArtistaQuadro>
                     <MenuArtistaQuadro imagemArtista={imagemng} textoImagem='Martin Garrix' nomeArtista={'Martin Garrix'}></MenuArtistaQuadro>
                     <MenuArtistaQuadro imagemArtista={imagemveigh} textoImagem='Veigh' nomeArtista={'Veigh'}></MenuArtistaQuadro>

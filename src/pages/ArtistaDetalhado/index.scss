@@ -1,0 +1,132 @@
+.ArtistaDetalhado {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+    .secao1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .secao1>img{
+        width: 90%;
+        border-radius: 20px;
+    }
+    .secao2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .secao2>div{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        gap: 40px;
+    }
+    .artista-page-button{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: 40px;
+    }
+    .content-secao2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .redes-artista{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .redes-artista>img{
+        width: 30px;
+    }
+    .redes-artista>img:hover{
+        cursor: pointer;
+    }
+    .retangulo-artista {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        width: 162px;
+        height: 48px;
+
+        background: #D9D9D9;
+        border-radius: 10px;
+        color: #000;
+    }
+    .retangulo-artista:hover {
+        background: #a9a9a9;
+        color: #000;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .retangulo-artista>p{
+        font-size: 18px;
+    }
+    .paragrafo-bibliografia{
+        display: flex;
+        justify-content: center;
+        background-color: #fcf7f7;
+        align-items: center;
+        border-radius: 20px;
+    }
+    p{
+        line-height: 20px;
+        width: 80%;
+        text-align: center;
+        color: #000;
+    }
+    .imagem-perfil{
+        width: 80%;
+    }
+    .secao3{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .secao3>div{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80%;
+    }
+    .img-album-artista{
+        width: 20%;
+    }
+    .secao4{
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+    .secao4>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+}

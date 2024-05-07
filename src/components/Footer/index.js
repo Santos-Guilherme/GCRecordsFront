@@ -12,8 +12,8 @@ export default function Footer() {
             <footer>
                 <div className='links-foot'>
                     <div className='container-nav-foot'>
-                        <p><Link to='/Artista'> Artista</Link></p>
-                        <p><Link to='/Sobre'> Sobre</Link></p>
+                        <p><Link to='/artistas'> Artistas</Link></p>
+                        <p><Link to='/sobre'> Sobre</Link></p>
                     </div>
                     <div className='container-redes-foot'>
                         <div><img src={imagemInstagram} className="logo-redes" alt="logo" /><p>Instagram</p></div>

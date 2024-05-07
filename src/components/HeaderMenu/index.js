@@ -7,12 +7,12 @@ export default function HeaderMenu() {
     return (
         <div className='HeaderMenu'>
             <header>
-                <Link to='/login'><img src={setinha} className='setinha' alt="setinha" /></Link>
+                <Link to='/menu'><img src={setinha} className='setinha' alt="setinha" /></Link>
                 <Link to='/'><img src={imagemlogo} className="App-logo" alt="logo" /></Link>
 
-                <span className='retangulo'>
-                    <Link className='botaologin' to='/login'>Sair</Link>
-                </span>
+                <Link className='retangulo' to='/login'>
+                    <p className='botaologin'>Sair</p>
+                </Link>
             </header>
         </div>
     )

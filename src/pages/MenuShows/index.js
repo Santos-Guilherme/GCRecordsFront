@@ -14,7 +14,7 @@ export default function MenuShows() {
                     <h1>Escolha a opção</h1>
 
                     <div className='retangulomenu'>
-                        <a className='botao' href=''>Ver Shows</a>
+                        <a className='botao' href='/'>Ver Shows</a>
                     </div>
 
                     <Link className='retangulomenu' to='/adicionarshows'>
@@ -24,11 +24,11 @@ export default function MenuShows() {
                     </Link>
 
                     <div className='retangulomenu'>
-                        <a className='botao' href=''>Mudar local shows</a>
+                        <a className='botao' href='/'>Mudar local shows</a>
                     </div>
 
                     <div className='retangulomenu'>
-                        <a className='botao' href=''>Desmarcar shows</a>
+                        <a className='botao' href='/'>Desmarcar shows</a>
                     </div>
                 </div>
             </div>

@@ -39,6 +39,8 @@
     .retangulo {
         display: flex;
         align-self: center;
+        align-items: center;
+        justify-content: center;
         width: 162px;
         height: 48px;
         background: #67117B;

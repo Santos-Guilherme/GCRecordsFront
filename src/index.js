@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Shows from './pages/Shows';
 import Sobre from './pages/Sobre';
 import Lancamentos from './pages/Lancamentos';
+import ArtistaDetalhado from './pages/ArtistaDetalhado';
 import Artista from './pages/Artista';
 import Login from './pages/Login';
 import Menu from './pages/Menu';
@@ -30,13 +31,15 @@ root.render(
       <Route path='/sobre' element = {<Sobre />}/>
       <Route path='/shows' element = {<Shows />}/>
       <Route path='/lancamentos' element = {<Lancamentos />}/>
-      <Route path='/artista' element = {<Artista />}/>
+      <Route path='/artistas' element = {<Artista />}/>
+      <Route path='/artista' element = {<ArtistaDetalhado />}/>
       <Route path='/login' element = {<Login />}/>
       <Route path='/menu' element = {<Menu />}/>
       <Route path='/adicionarshows' element = {<AdicionarShows />}/>
       <Route path='/menualbum' element = {<MenuAlbum />}/>
       <Route path='/menuartista' element = {<MenuArtista />}/>
       <Route path='/menushows' element = {<MenuShows />}/>
+      
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

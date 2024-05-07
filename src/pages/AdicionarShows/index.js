@@ -68,7 +68,7 @@ export default function AdicionarShows() {
                             </div>
 
                             <div className='adicionarretangulo'>
-                                <a className='botaoadicionar' href=''> Adicionar</a>
+                                <a className='botaoadicionar' href='/'> Adicionar</a>
                             </div>
 
 

@@ -9,22 +9,21 @@ export default function Header() {
                 <Link to='/'><img src={imagemlogo} className="App-logo" alt="logo" /></Link>
                 <ul>
                     <li className='artista'>
-                        <Link to='/Artista'> Artista</Link>
+                        <Link to='/artistas'> Artistas</Link>
                     </li>
                     <li className='lancamento'>
-                        <Link to='/Lancamentos'> Lançamento</Link>
+                        <Link to='/lancamentos'> Lançamento</Link>
                     </li>
                     <li className='shows'>
-                        <Link to='/Shows'> Shows</Link>
+                        <Link to='/shows'> Shows</Link>
                     </li>
                     <li className='sobre'>
-                        <Link to='/Sobre'> Sobre</Link>
+                        <Link to='/sobre'> Sobre</Link>
                     </li>
                 </ul>
-                <span className='retangulo'>
-                    <Link to='/login' className='botaologin' href>Login
-                    </Link>
-                </span>
+                <Link className='retangulo' to='/login'>
+                    <p className='botaologin'>Login</p>
+                </Link>
             </header>
         </div>
     )

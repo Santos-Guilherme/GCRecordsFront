@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    color: #fff;
     footer {
         display: flex;
         flex-direction: row;
@@ -17,7 +18,11 @@
         align-items: flex-start;
     }
 
+    .container-redes-foot>div>p{
+        color: #fff;
+    }
     .links-foot {
+        font-size: 18px;
         display: flex;
         gap: 40px;
         line-height: 30px;
