@@ -20,6 +20,10 @@ import MenuAlbum from './pages/MenuAlbum';
 import MenuArtista from './pages/MenuArtista';
 import MenuShows from './pages/MenuShows';
 import AdicionarAlbum from './pages/AdicionarAlbum';
+import AdicionarArtistas from './pages/AdicionarArtistas';
+import EditarArtistas from './pages/EditarArtistas'
+import EditarAlbum from './pages/EditarAlbum'
+import NossosArtista from './pages/NossosArtistas';
 
 
 
@@ -41,6 +45,10 @@ root.render(
       <Route path='/menuartista' element = {<MenuArtista />}/>
       <Route path='/menushows' element = {<MenuShows />}/>
       <Route path='/adicionaralbum' element = {<AdicionarAlbum />}/>
+      <Route path='/adicionarartistas' element = {<AdicionarArtistas />}/>
+      <Route path='/editarartistas' element = {<EditarArtistas />}/>
+      <Route path='/editaralbum' element = {<EditarAlbum />}/>
+      <Route path='/seusartistas' element = {<NossosArtista />}/>
       
     </Routes>
     </BrowserRouter>
