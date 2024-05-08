@@ -24,6 +24,7 @@ import AdicionarArtistas from './pages/AdicionarArtistas';
 import EditarArtistas from './pages/EditarArtistas'
 import EditarAlbum from './pages/EditarAlbum'
 import NossosArtista from './pages/NossosArtistas';
+import NossosShows from './pages/NossosShows';
 
 
 
@@ -49,6 +50,7 @@ root.render(
       <Route path='/editarartistas' element = {<EditarArtistas />}/>
       <Route path='/editaralbum' element = {<EditarAlbum />}/>
       <Route path='/seusartistas' element = {<NossosArtista />}/>
+      <Route path='/nossosshows' element = {<NossosShows />} />
       
     </Routes>
     </BrowserRouter>

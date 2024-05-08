@@ -9,24 +9,23 @@ import Footer from '../../components/Footer';
 import MenuArtistaQuadro from '../../components/MenuArtistaQuadro';
 import { Link } from 'react-router-dom';
 
-export default function NossosArtista() {
+export default function NossosShows() {
     return (
         <div className='Artista-home'>
             <div className='Content'>
                 <Header></Header>
                 <div className='secao1'>
-                    <h1>Seus Artistas</h1>
+                    <h1>Shows</h1>
                 </div>
-
                 <div>
-                    <div>
-                        <p>Procurar Artista:</p>
-                    </div>
-                <input type='text'></input>
+                <div>
+                <p>Filtro Por Artista</p>
                 </div>
+                <input type='text'></input>
 
-
-
+                </div>
+                
+                
                 <div className='content-lista-artistas'>
                     <Link to='/artista'><MenuArtistaQuadro imagemArtista={imagemnicki} textoImagem='Nicki Nicole' nomeArtista={'Nicki Nicole'}></MenuArtistaQuadro></Link>
                     <MenuArtistaQuadro imagemArtista={imagemtate} textoImagem='Tate McRae' nomeArtista={'Tate McRae'}></MenuArtistaQuadro>
