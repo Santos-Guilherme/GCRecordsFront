@@ -2,6 +2,7 @@ import './index.scss';
 
 import Footer from '../../components/Footer';
 import HeaderMenu from '../../components/HeaderMenu';
+import { Link } from 'react-router-dom';
 //import { Link } from 'react-router-dom';
 
 export default function MenuAlbum() {
@@ -17,17 +18,17 @@ export default function MenuAlbum() {
                         <a className='botao' href='/'>Ver Albuns</a>
                     </div>
 
-                    <div className='retangulomenu'>
+                    <Link className='retangulomenu' to='/adicionaralbum'>
+                    <div>
                         <a className='botao' href='/'>Adicionar Album</a>
                     </div>
+                    </Link>
 
-                    <div className='retangulomenu'>
+                    <Link className='retangulomenu' to='/editaralbum'>
+                    <div>
                         <a className='botao' href='/'>Editar capa de album</a>
                     </div>
-
-                    <div className='retangulomenu'>
-                        <a className='botao' href='/'>Excluir Album</a>
-                    </div>
+                    </Link>
                 </div>
             </div>
 

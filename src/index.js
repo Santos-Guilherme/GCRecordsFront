@@ -23,6 +23,7 @@ import AdicionarAlbum from './pages/AdicionarAlbum';
 import AdicionarArtistas from './pages/AdicionarArtistas';
 import EditarArtistas from './pages/EditarArtistas'
 import EditarAlbum from './pages/EditarAlbum'
+import EditarShow from './pages/EditarShow';
 import NossosArtista from './pages/NossosArtistas';
 import NossosShows from './pages/NossosShows';
 
@@ -49,6 +50,7 @@ root.render(
       <Route path='/adicionarartistas' element = {<AdicionarArtistas />}/>
       <Route path='/editarartistas' element = {<EditarArtistas />}/>
       <Route path='/editaralbum' element = {<EditarAlbum />}/>
+      <Route path='/editarshow' element = {<EditarShow />}/>
       <Route path='/seusartistas' element = {<NossosArtista />}/>
       <Route path='/nossosshows' element = {<NossosShows />} />
       

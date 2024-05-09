@@ -23,13 +23,11 @@ export default function MenuShows() {
                     </div>
                     </Link>
 
-                    <div className='retangulomenu'>
+                    <Link className='retangulomenu' to='/editarshow'>
+                    <div>
                         <a className='botao' href='/'>Mudar local shows</a>
                     </div>
-
-                    <div className='retangulomenu'>
-                        <a className='botao' href='/'>Desmarcar shows</a>
-                    </div>
+                    </Link>
                 </div>
             </div>
 
