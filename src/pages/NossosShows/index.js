@@ -17,21 +17,19 @@ export default function NossosShows() {
                 <div className='secao1'>
                     <h1>Shows</h1>
                 </div>
-                <div>
-                <div>
-                <p>Filtro Por Artista</p>
-                </div>
-                <input type='text'></input>
+
+                <div className='titulo'>
+                    <div>
+                        <h2>Filtro Por Artista</h2>
+                    </div>
+                    <input type='text'></input>
 
                 </div>
-                
-                
+
+
                 <div className='content-lista-artistas'>
                     <Link to='/artista'><MenuArtistaQuadro imagemArtista={imagemnicki} textoImagem='Nicki Nicole' nomeArtista={'Nicki Nicole'}></MenuArtistaQuadro></Link>
-                    <MenuArtistaQuadro imagemArtista={imagemtate} textoImagem='Tate McRae' nomeArtista={'Tate McRae'}></MenuArtistaQuadro>
-                    <MenuArtistaQuadro imagemArtista={imagemng} textoImagem='Martin Garrix' nomeArtista={'Martin Garrix'}></MenuArtistaQuadro>
-                    <MenuArtistaQuadro imagemArtista={imagemveigh} textoImagem='Veigh' nomeArtista={'Veigh'}></MenuArtistaQuadro>
-                    <MenuArtistaQuadro imagemArtista={imagemrod} textoImagem='Rodolfo O Capitão' nomeArtista={'Rodolfo O Capitão'}></MenuArtistaQuadro>
+
                 </div>
                 <Footer></Footer>
             </div>

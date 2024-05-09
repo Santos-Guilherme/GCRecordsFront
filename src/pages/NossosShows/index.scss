@@ -29,7 +29,14 @@
         gap: 20px;
         width: 100%;
     }
-    a{
+
+    a {
         text-decoration: none;
+    }
+
+    .titulo>input {
+        margin-top: 10px;
+        border-radius: 10px;
+        width: 100%;
     }
 }
