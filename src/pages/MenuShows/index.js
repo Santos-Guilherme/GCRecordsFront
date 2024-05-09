@@ -13,9 +13,11 @@ export default function MenuShows() {
                 <div className='Content'>
                     <h1>Escolha a opção</h1>
 
-                    <div className='retangulomenu'>
+                    <Link className='retangulomenu' to='/nossosshows'>
+                    <div>
                         <a className='botao' href='/'>Ver Shows</a>
                     </div>
+                    </Link>
 
                     <Link className='retangulomenu' to='/adicionarshows'>
                     <div>
