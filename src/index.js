@@ -38,7 +38,7 @@ root.render(
       <Route path='/shows' element = {<Shows />}/>
       <Route path='/lancamentos' element = {<Lancamentos />}/>
       <Route path='/artistas' element = {<Artista />}/>
-      <Route path='/artista' element = {<ArtistaDetalhado />}/>
+      <Route path='/artista/:id' element = {<ArtistaDetalhado key='1'/>}/>
       <Route path='/login' element = {<Login />}/>
       <Route path='/menu' element = {<Menu />}/>
       <Route path='/adicionarshows' element = {<AdicionarShows />}/>
