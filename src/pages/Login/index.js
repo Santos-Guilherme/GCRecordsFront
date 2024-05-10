@@ -2,8 +2,21 @@ import './index.scss';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
 
 export default function Home() {
+     const [user, setUser] = useState('');
+     const [senha, setSenha] = useState('');
+    
+
+    const buscar = async () => {
+        let url = 'http://localhost:8080/login/entrar';
+    
+        let r = await axios.get(url);
+        let info = r.data;
+    }
+
     return (
         <div className='Login'>
             <div className='Header'>

@@ -13,9 +13,11 @@ export default function MenuArtista() {
                 <div className='Content'>
                     <h1>Escolha a opção</h1>
 
-                    <div className='retangulomenu'>
+                    <Link className='retangulomenu' to='/seusartistas'>
+                    <div>
                         <a className='botao' href='/'>Ver Artista</a>
                     </div>
+                    </Link>
 
                     <Link className='retangulomenu' to='/adicionarartistas'>
                     <div>
@@ -23,9 +25,11 @@ export default function MenuArtista() {
                     </div>
                     </Link>
 
-                    <div className='retangulomenu'>
+                    <Link className='retangulomenu' to='/editarartistas'>
+                    <div>
                         <a className='botao' href='/'>Editar artista</a>
                     </div>
+                    </Link>
                 </div>
             </div>
 
