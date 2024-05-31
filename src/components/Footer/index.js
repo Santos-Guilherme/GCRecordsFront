@@ -11,10 +11,10 @@ export default function Footer() {
                         <p><Link to='/sobre'> Sobre</Link></p>
                     </div>
                     <div className='container-redes-foot'>
-                        <div><img src="/assets/images/redes/instagram.png" className="logo-redes" alt="logo" /><p>Instagram</p></div>
-                        <div><img src="/assets/images/redes/tik-tok.png" className="logo-redes" alt="logo" /><p>Tiktok</p></div>
-                        <div><img src="/assets/images/redes/twitter.png" className="logo-redes" alt="logo" /><p>Twitter</p></div>
-                        <div><img src="/assets/images/redes/youtube.png" className="logo-redes" alt="logo" /><p>Youtube</p></div>
+                        <a href='www.instagram.com'><img src="/assets/images/redes/instagram.png" className="logo-redes" alt="logo" /><p>Instagram</p></a>
+                        <a href='www.instagram.com'><img src="/assets/images/redes/tik-tok.png" className="logo-redes" alt="logo" /><p>Tiktok</p></a>
+                        <a href='www.instagram.com'><img src="/assets/images/redes/twitter.png" className="logo-redes" alt="logo" /><p>Twitter</p></a>
+                        <a href='www.instagram.com'><img src="/assets/images/redes/youtube.png" className="logo-redes" alt="logo" /><p>Youtube</p></a>
                     </div>
                 </div>
                 <div className='container-logo-foot'>
