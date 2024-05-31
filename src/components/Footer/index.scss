@@ -3,6 +3,7 @@
     justify-content: center;
     width: 100%;
     color: #fff;
+
     footer {
         display: flex;
         flex-direction: row;
@@ -18,9 +19,10 @@
         align-items: flex-start;
     }
 
-    .container-redes-foot>div>p{
+    .container-redes-foot>div>p {
         color: #fff;
     }
+
     .links-foot {
         font-size: 18px;
         display: flex;
@@ -61,6 +63,7 @@
         color: #67117B;
         cursor: pointer;
     }
+
     a:link {
         color: #fff;
     }

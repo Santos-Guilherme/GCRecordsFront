@@ -1,10 +1,5 @@
 import './index.scss';
-import imagemlogo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
-import imagemInstagram from '../../assets/images/instagram.png';
-import imagemTiktok from '../../assets/images/tik-tok.png';
-import imagemTwitter from '../../assets/images/twitter.png';
-import imagemYoutube from '../../assets/images/youtube.png';
 
 export default function Footer() {
     return (
@@ -16,14 +11,14 @@ export default function Footer() {
                         <p><Link to='/sobre'> Sobre</Link></p>
                     </div>
                     <div className='container-redes-foot'>
-                        <div><img src={imagemInstagram} className="logo-redes" alt="logo" /><p>Instagram</p></div>
-                        <div><img src={imagemTiktok} className="logo-redes" alt="logo" /><p>Tiktok</p></div>
-                        <div><img src={imagemTwitter} className="logo-redes" alt="logo" /><p>Twitter</p></div>
-                        <div><img src={imagemYoutube} className="logo-redes" alt="logo" /><p>Youtube</p></div>
+                        <div><img src="/assets/images/redes/instagram.png" className="logo-redes" alt="logo" /><p>Instagram</p></div>
+                        <div><img src="/assets/images/redes/tik-tok.png" className="logo-redes" alt="logo" /><p>Tiktok</p></div>
+                        <div><img src="/assets/images/redes/twitter.png" className="logo-redes" alt="logo" /><p>Twitter</p></div>
+                        <div><img src="/assets/images/redes/youtube.png" className="logo-redes" alt="logo" /><p>Youtube</p></div>
                     </div>
                 </div>
                 <div className='container-logo-foot'>
-                    <Link to='/'><img src={imagemlogo} alt="logo" className='logo-foot' /></Link>
+                    <Link to='/'><img src="/assets/images/logo.png" alt="logo" className='logo-foot' /></Link>
                 </div>
             </footer>
         </div>

@@ -1,9 +1,8 @@
 import './index.scss';
-import axios from 'axios';
+import * as artistaApi from '../../Api/ArtistaApi'
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import MenuArtistaQuadro from '../../components/MenuArtistaQuadro';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export default function Artista() {
@@ -11,29 +10,25 @@ export default function Artista() {
 
     useEffect(() => {
         const buscar = async () => {
-            let url = 'http://localhost:8080/artista';
-        
-            let r = await axios.get(url);
-            let info = r.data;
-        
+            const info = await artistaApi.buscarArtistas();
             setListaArtistas(info);
         }
         buscar();
-    })
-    
+    }, []);
+
     return (
         <div className='Artista-home'>
             <div className='Content'>
-                <Header></Header>
+                <Header />
                 <div className='secao1'>
                     <h1>Artistas</h1>
                 </div>
                 <div className='content-lista-artistas'>
                     {listaArtistas.map(item =>
-                        <Link to={`/artista/${item.id}`}><MenuArtistaQuadro nomeArtista={item.nome} key={item.id}></MenuArtistaQuadro></Link>
+                        <MenuArtistaQuadro item={item} key={item.id} />
                     )}
                 </div>
-                <Footer></Footer>
+                <Footer />
             </div>
         </div>
     );

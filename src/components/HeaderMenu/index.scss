@@ -1,6 +1,7 @@
 .HeaderMenu {
     width: 100%;
     margin-bottom: 40px;
+
     header {
         display: flex;
         flex-flow: row;
@@ -30,6 +31,7 @@
         color: #67117B;
         cursor: pointer;
         transition: 0.3s;
+
         a {
             color: #67117B;
             transition: 0.2s;

@@ -1,16 +1,20 @@
+import { Link } from 'react-router-dom';
 import './index.scss';
-import imagemlogo from '../../assets/images/logo.png';
-//import { Link } from 'react-router-dom';
+import { API_ADDRESS } from '../../Api/constant';
 
-export default function MenuArtistaQuadro(props) {
+export default function MenuArtistaQuadro({ item }) {
+    const imgSrc = item.imgSelfie ? `${API_ADDRESS}/${item.imgSelfie.replace(/\\/g, '/')}` : '/assets/images/perfil.png';
+
     return (
-        <div className='MenuArtistaQuadro'>
-            <div className='artista'>
-                <span>
-                    <div><h1>{props.nomeArtista}</h1></div>
-                    <img src={props.imagemArtista ?? imagemlogo} className="imagemArtista" alt={props.textoImagem} />
-                </span>
+        <Link to={`/artista/${item.id}`}>
+            <div className='MenuArtistaQuadro'>
+                <div className='artista'>
+                    <span>
+                        <div><h1>{item.nome}</h1></div>
+                        <img src={imgSrc} className="imagemArtista" alt={item.nome} />
+                    </span>
+                </div>
             </div>
-        </div>
-    )
+        </Link>
+    );
 }

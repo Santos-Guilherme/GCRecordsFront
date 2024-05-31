@@ -1,13 +1,13 @@
 import './index.scss';
-import imagemlogo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
         <div className='Header'>
             <header>
-                <Link to='/'><img src={imagemlogo} className="App-logo" alt="logo" /></Link>
+                <Link to='/'><img src="/assets/images/logo.png" className="App-logo" alt="logo" /></Link>
                 <ul>
+                    <i className='fa fa-camera camera'></i>
                     <li className='artista'>
                         <Link to='/artistas'> Artistas</Link>
                     </li>
