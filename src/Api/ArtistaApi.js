@@ -23,7 +23,7 @@ export async function removerArtista(id) {
     return r.data;
 }
 
-export async function buscarArtistaPorId(id) {
+export async function buscarArtistasporId(id) {
     let url = API_ADDRESS + '/artista/' + id;
 
     let r = await axios.get(url);

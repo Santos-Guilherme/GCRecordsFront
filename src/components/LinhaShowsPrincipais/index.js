@@ -2,24 +2,19 @@ import React, { useEffect, useState } from 'react';
 import './index.scss';
 import { API_ADDRESS } from '../../Api/constant';
 
-export default function LinhaShowsPrincipais(props, {fk_idArtista}) {
+export default function LinhaShowsPrincipais(props) {
     const [formattedDate, setFormattedDate] = useState('');
 
     useEffect(() => {
-        const fetchData = async () => {
-                const formatShowDate = (dateString) => {
-                    const date = new Date(dateString);
-                    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                    const day = date.getDate();
-                    const monthIndex = date.getMonth();
-                    return `${day} ${monthNames[monthIndex]}`;
-                };
-                setFormattedDate(formatShowDate(props.dataShow));
+        const formatShowDate = (dateString) => {
+            const date = new Date(dateString);
+            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            const day = date.getDate();
+            const monthIndex = date.getMonth();
+            return `${day} ${monthNames[monthIndex]}`;
         };
-
-        fetchData();
-    }, [props.dataShow, fk_idArtista]);
-
+        setFormattedDate(formatShowDate(props.dataShow));
+    }, [props.dataShow]);
 
     return (
         <div className='LinhaShowsPrincipais'>
@@ -30,8 +25,8 @@ export default function LinhaShowsPrincipais(props, {fk_idArtista}) {
                 <p>{props.nomeShow}</p>
             </div>
             <div>
-                <img src='' className="img-artista" alt='' />
-                <p>{props.nomeShow}</p>
+                <img src={`${API_ADDRESS}/${props.imagemArtista}`} className="img-artista" alt={props.nomeArtista} />
+                <p>{props.nomeArtista}</p>
             </div>
         </div>
     );

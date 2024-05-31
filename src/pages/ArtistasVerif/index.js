@@ -27,7 +27,7 @@ export default function ArtistasVerif() {
                 {
                     label: 'Sim',
                     onClick: async () => {
-                        let r = await artistaApi.removerArtista(artista.id);
+                        await artistaApi.removerArtista(artista.id);
                         toast.dark('✅ Aluno removido com sucesso.');
 
                         buscar();

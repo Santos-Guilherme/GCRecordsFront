@@ -3,8 +3,9 @@ import './index.scss';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import LinhaShowsPrincipais from '../../components/LinhaShowsPrincipais';
-import * as showApi from '../../Api/ShowApi'; // Adjust the import path as needed
-import { API_ADDRESS } from '../../Api/constant';
+import * as artistaApi from '../../Api/ArtistaApi';
+import * as showApi from '../../Api/ShowApi';
+import axios from 'axios';
 
 export default function Shows() {
     const [shows, setShows] = useState([]);
@@ -12,8 +13,7 @@ export default function Shows() {
     useEffect(() => {
         const fetchShows = async () => {
             try {
-                const fetchedShows = await showApi.buscarShowsPrincipais();
-                setShows(fetchedShows);
+                setShows(await showApi.buscarShowsPrincipais());
             } catch (error) {
                 console.error('Error fetching shows:', error);
             }
@@ -36,7 +36,8 @@ export default function Shows() {
                                 key={show.id}
                                 dataShow={show.dataShow}
                                 nomeShow={show.nome}
-                                fk_idArtista ={show.fk_idArtista}
+                                nomeArtista={show.nomeArtista}
+                                imagemArtista={show.imagemArtista}
                             />
                         ))}
                     </div>
