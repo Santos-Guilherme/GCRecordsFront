@@ -1,8 +1,22 @@
 import './index.scss';
+import * as artistaApi from '../../Api/ArtistaApi'
 import Footer from '../../components/Footer';
 import HeaderMenu from '../../components/HeaderMenu';
+import { useEffect, useState } from 'react';
 
 export default function ShowsVerif() {
+
+    const [listaArtistas, setListaArtistas] = useState([]);
+
+    const buscar = async () => {
+        const info = await artistaApi.buscarArtistas();
+        setListaArtistas(info);
+    }
+
+    useEffect(() => {
+        buscar();
+    })
+
     return (
         <div className='ShowsVerif'>
             <div className='Content'>
@@ -14,7 +28,9 @@ export default function ShowsVerif() {
                     <div>
                         <h2>Filtro Por Artista</h2>
                     </div>
-                    <input type='text'></input>
+                    <select>
+                    {listaArtistas.map(item => <option>{item.nome}</option>)}
+                    </select>
                 </div>
                 <div className='content-lista-artistas'>
                 </div>
