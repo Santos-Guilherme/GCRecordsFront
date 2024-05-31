@@ -3,9 +3,7 @@ import './index.scss';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import LinhaShowsPrincipais from '../../components/LinhaShowsPrincipais';
-import * as artistaApi from '../../Api/ArtistaApi';
 import * as showApi from '../../Api/ShowApi';
-import axios from 'axios';
 
 export default function Shows() {
     const [shows, setShows] = useState([]);
