@@ -29,3 +29,10 @@ export async function buscarArtistasporId(id) {
     let r = await axios.get(url);
     return r.data;
 }
+
+export async function atualizarArtista(id, corpo) {
+    let url = API_ADDRESS + '/artista/' + id;
+
+    let r = await axios.put(url, corpo);
+    return r.data;
+}
