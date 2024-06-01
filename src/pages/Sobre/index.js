@@ -12,7 +12,7 @@ export default function Sobre() {
                 </div>
                 <div className='div-paragrafo'>
                     <p>Somos uma gravadora brasileira com foco em levar para todas as comunidades o mais alto nível de música e cultura.</p>
-                    <img src="/assets/images/pagina-sobre/sobre-foto-grupo.png" className="Imagem-Sobre" alt="Imagem do integrantes fundadores e desenvolvedores da GCRecords" />
+                    <img src="/assets/images/pagina-sobre/pecinhas.jpg" className="Imagem-Sobre" alt="Imagem do integrantes fundadores e desenvolvedores da GCRecords" />
                 </div>
                 <div>
                     <h1>Objetivo</h1>
