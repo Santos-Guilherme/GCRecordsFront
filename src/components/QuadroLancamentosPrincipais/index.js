@@ -10,7 +10,7 @@ export default function QuadroLancamentosPrincipais({ artistaId, nomeArtista }) 
         const fetchAlbums = async () => {
             try {
                 const albums = await albumApi.buscarUltimosDoisAlbunsPorArtista(artistaId);
-                const filteredAlbums = albums.filter(album => album.imgCapa);
+                const filteredAlbums = albums.filter(album => album.capa);
                 if (filteredAlbums.length === 2) {
                     setAlbums(filteredAlbums);
                 }
@@ -22,7 +22,6 @@ export default function QuadroLancamentosPrincipais({ artistaId, nomeArtista }) 
         fetchAlbums();
     }, [artistaId]);
 
-    // Only render if there are exactly 2 albums with cover images
     if (albums.length !== 2) {
         return null;
     }
@@ -32,7 +31,7 @@ export default function QuadroLancamentosPrincipais({ artistaId, nomeArtista }) 
             <div>
                 <img
                     key={albums[0].id}
-                    src={`${API_ADDRESS}/${albums[0].imgCapa.replace(/\\/g, '/')}`}
+                    src={`${API_ADDRESS}/${albums[0].capa.replace(/\\/g, '/')}`}
                     className="img-album"
                     alt={albums[0].nome}
                 />
@@ -41,7 +40,7 @@ export default function QuadroLancamentosPrincipais({ artistaId, nomeArtista }) 
             <div>
                 <img
                     key={albums[1].id}
-                    src={`${API_ADDRESS}/${albums[1].imgCapa.replace(/\\/g, '/')}`}
+                    src={`${API_ADDRESS}/${albums[1].capa.replace(/\\/g, '/')}`}
                     className="img-album"
                     alt={albums[1].nome}
                 />

@@ -3,7 +3,7 @@ import './index.scss';
 import { API_ADDRESS } from '../../Api/constant';
 
 export default function MenuArtistaQuadro({ item }) {
-    const imgSrc = item.imgSelfie ? `${API_ADDRESS}/${item.imgSelfie.replace(/\\/g, '/')}` : '/assets/images/perfil.png';
+    const imgSrc = item.selfie ? `${API_ADDRESS}/${item.selfie}` : '/assets/images/perfil.png';
 
     return (
         <Link to={`/artista/${item.id}`}>

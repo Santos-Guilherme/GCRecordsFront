@@ -11,6 +11,13 @@ export async function buscarShowsPrincipais() {
     }
 }
 
+export async function buscarShowsPorArtista(id) {
+    let url = API_ADDRESS + '/show/artista/'+ id;
+
+    let r = await axios.get(url);
+    return r.data;
+}
+
 export async function salvarShow(show) {
     try {
         const response = await axios.post(`${API_ADDRESS}/show`, show);

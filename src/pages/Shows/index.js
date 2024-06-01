@@ -32,7 +32,7 @@ export default function Shows() {
                         {shows.map(show => (
                             <LinhaShowsPrincipais
                                 key={show.id}
-                                dataShow={show.dataShow}
+                                dataShow={show.data}
                                 nomeShow={show.nome}
                                 nomeArtista={show.nomeArtista}
                                 imagemArtista={show.imagemArtista}

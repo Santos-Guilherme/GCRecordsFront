@@ -12,6 +12,8 @@
         text-wrap: nowrap;
         justify-content: space-evenly;
         color: #fff;
+        font-size: 15px;
+        text-align: center;
     }
 
     .img-artista {
@@ -21,11 +23,12 @@
     }
 
     .show-data {
+        display: flex;
+        align-items: center;
         width: 56px;
         height: 58px;
         background: #1E1D1D;
         text-wrap: wrap;
-        
     }
 
     .linha-show {

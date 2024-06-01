@@ -18,6 +18,9 @@
         width: 200px;
         text-wrap: nowrap;
         justify-content: space-evenly;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
     }
     .nome-artista {
         color: #fff;
@@ -27,13 +30,17 @@
         height: 150px;
         width: 150px;
         object-fit: cover;
+        margin-bottom: 10px;
     }
 
     .show-data {
+        display: flex;
+        align-items: center;
         width: 56px;
         height: 58px;
         background: #1E1D1D;
         text-wrap: wrap;
+        font-size: 15px;
     }
 
     .linha-show {

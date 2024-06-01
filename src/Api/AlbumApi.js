@@ -9,6 +9,13 @@ export async function buscarLancamentos() {
     return r.data;
 }
 
+export async function buscarAlbumPorArtista(id) {
+    let url = API_ADDRESS + '/album/artista/'+ id;
+
+    let r = await axios.get(url);
+    return r.data;
+}
+
 export async function buscarUltimosDoisAlbunsPorArtista(id) {
     let url = API_ADDRESS + '/album/lancamentos/' + id;
 

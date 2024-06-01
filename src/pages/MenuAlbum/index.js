@@ -12,9 +12,9 @@ export default function MenuAlbum() {
             <div className='Quadromenu'>
                 <div className='Content'>
                     <h1>Escolha a opção</h1>
-                    <div className='retangulomenu'>
+                    <Link className='retangulomenu' to='/album/verif'>
                         <a className='botao' href='/'>Ver Albuns</a>
-                    </div>
+                    </Link>
                     <Link className='retangulomenu' to='/album/cadastro'>
                         <div>
                             <a className='botao' href='/'>Adicionar Album</a>

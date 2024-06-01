@@ -23,6 +23,7 @@ import ShowsCadastro from './pages/ShowsCadastro';
 
 import AlbumCadastro from './pages/AlbumCadastro';
 import AlbumEditar from './pages/AlbumEditar'
+import AlbumVerif from './pages/AlbumVerif';
 
 
 
@@ -54,7 +55,7 @@ export default function Navegacao() {
 
       <Route path='/album/cadastro' element = {<AlbumCadastro />}/>
       <Route path='/album/editar' element = {<AlbumEditar />}/>
-
+      <Route path='/album/verif' element = {<AlbumVerif />}/>
    
     </Routes>
     </BrowserRouter>

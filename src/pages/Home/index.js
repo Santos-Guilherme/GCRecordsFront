@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './index.scss';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { buscarLancamentos } from '../../Api/AlbumApi'; // Adjust the import path as needed
+import { buscarLancamentos } from '../../Api/AlbumApi';
 import { API_ADDRESS } from '../../Api/constant';
 
 export default function Home() {
@@ -36,14 +36,12 @@ export default function Home() {
                 <h2>Últimos Lançamentos</h2>
                 <div>
                     {lancamentos.map((album) => (
-                        album.imgCapa && (
                             <img
                                 key={album.id}
-                                src={`${API_ADDRESS}/${album.imgCapa.replace(/\\/g, '/')}`}
+                                src={`${API_ADDRESS}/${album.capa}`}
                                 className="imagemlancamento"
                                 alt={album.nome}
                             />
-                        )
                     ))}
                 </div>
             </div>
