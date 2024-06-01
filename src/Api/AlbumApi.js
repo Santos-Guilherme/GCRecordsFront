@@ -15,3 +15,9 @@ export async function buscarUltimosDoisAlbunsPorArtista(id) {
     let r = await axios.get(url);
     return r.data;
 }
+
+export async function salvarAlbum(album) {
+    let url = API_ADDRESS + '/album';
+    let r = await axios.post(url, album);
+    return r.data;
+}

@@ -10,3 +10,13 @@ export async function buscarShowsPrincipais() {
         throw error;
     }
 }
+
+export async function salvarShow(show) {
+    try {
+        const response = await axios.post(`${API_ADDRESS}/show`, show);
+        return response.data;
+    } catch (error) {
+        console.error('Error saving show:', error);
+        throw error;
+    }
+}
