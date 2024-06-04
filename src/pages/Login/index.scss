@@ -46,7 +46,6 @@
         align-items: center;
         width: 100%;
         gap: 35px;
-
     }
 
     .campos>div {
@@ -67,8 +66,9 @@
         height: 28px;
         border-radius: 12px;
         border-color: #fff;
+        padding: 2px;
         width: 80%;
-
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .entrarretangulo {
@@ -77,12 +77,8 @@
         align-items: center;
         width: 55%;
         height: 48px;
-
-
         background: #f49c9c9e;
         border-radius: 12px;
-
-
     }
 
     .botaoentrar {
@@ -91,7 +87,7 @@
         width: 100%;
     }
 
-    .botao-login{
+    .botao-login {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -110,7 +106,8 @@
         background-color: #fff;
         padding: 5px;
         transition: 0.5s;
-        .botaoentrar{
+
+        .botaoentrar {
             color: #67117B;
         }
     }

@@ -16,7 +16,7 @@ export default function ArtistasVerif() {
         let info;
         if (filtro.trim() === '') {
             info = await artistaApi.buscarArtistas();
-        } else if (!isNaN(filtro.trim())) { // Se o filtro for um número, filtra por ID
+        } else if (!isNaN(filtro.trim())) {
             info = await artistaApi.buscarArtistasporId(filtro.trim());
             if (!info) {
                 toast.error('Artista não encontrado.');

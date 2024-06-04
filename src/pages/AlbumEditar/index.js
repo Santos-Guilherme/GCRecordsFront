@@ -39,11 +39,9 @@ export default function AlbumEditar() {
         try {
             await uploadImagemAlbum(albumId, formData);
             toast.success('Capa do álbum editada com sucesso!');
-            // Redirecione ou faça outras ações após a edição bem-sucedida
         } catch (error) {
             console.error('Erro ao editar a capa do álbum:', error);
             toast.error('Erro ao editar a capa do álbum.');
-            // Trate erros aqui
         }
     };
 

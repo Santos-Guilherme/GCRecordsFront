@@ -3,7 +3,7 @@ import './index.scss';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import QuadroLancamentosPrincipais from '../../components/QuadroLancamentosPrincipais';
-import * as artistaApi from '../../Api/ArtistaApi'; // Adjust the import path as needed
+import * as artistaApi from '../../Api/ArtistaApi';
 
 export default function Lancamentos() {
     const [artistas, setArtistas] = useState([]);

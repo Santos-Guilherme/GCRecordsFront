@@ -3,6 +3,7 @@
     color: #fff;
     width: 100%;
     min-height: 100vh;
+
     h1 {
         font-size: 40px;
     }
@@ -43,6 +44,7 @@
         transition: 0.5s;
         cursor: pointer;
     }
+
     .content-lista-shows {
         display: flex;
         flex-direction: column;
@@ -60,24 +62,28 @@
         border-radius: 10px;
         width: 100%;
     }
-    .filtros{
+
+    .filtros {
         display: flex;
         justify-content: space-around;
         align-items: center;
         gap: 40px;
     }
-    .info-tabela{
+
+    .info-tabela {
         text-align: center;
         border-right: solid 1px #fff;
         padding-bottom: 10px;
     }
-    th{
+
+    th {
         text-align: center;
         border-bottom: solid 1px #fff;
         background-color: #4f4e4e;
         align-items: center;
         padding-top: 10px;
     }
+
     .funcao-tabela {
         width: 100%;
         display: flex;

@@ -40,9 +40,7 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
-
     }
-
 
     .campos {
         display: flex;
@@ -50,7 +48,6 @@
         align-items: center;
         width: 100%;
         gap: 35px;
-
     }
 
     .campos>div {
@@ -72,9 +69,7 @@
         border-radius: 12px;
         border-color: #fff;
         width: 80%;
-
     }
-
 
     .adicionarretangulo {
         display: flex;
@@ -82,11 +77,7 @@
         align-items: center;
         width: 20%;
         height: 48px;
-
-
         background: #f49c9c9e;
         border-radius: 12px;
-
-
     }
 }

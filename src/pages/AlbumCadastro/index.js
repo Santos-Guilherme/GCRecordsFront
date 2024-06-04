@@ -41,7 +41,6 @@ export default function AlbumCadastro() {
         try {
             const albumInserido = await salvarAlbum(album);
             toast.success('Álbum cadastrado com sucesso!');
-            // Após o cadastro do álbum, faz o upload da imagem se houver uma selecionada
             if (fotoAlbum) {
                 const formData = new FormData();
                 formData.append('imagemCapa', fotoAlbum);
