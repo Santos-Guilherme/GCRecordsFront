@@ -2,9 +2,17 @@
     background-color: #000;
     color: #fff;
     width: 100%;
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 40px;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .Content {
@@ -12,7 +20,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 60px;
+        gap: 20px;
         width: 100%;
     }
 
@@ -24,7 +32,7 @@
         margin-bottom: 40px;
         justify-content: space-around;
     }
-    .secao1 > div{
+    .secao1-content{
         width: 40%;
         align-items: center;
         height: 50px;
@@ -34,8 +42,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
         width: 100%;
+        gap: 20px;
     }
 
     a {
@@ -46,11 +54,13 @@
         margin-top: 10px;
         border-radius: 10px;
         width: 100%;
-
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .titulo {
         font-size: 25px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
     }
 
     button{
@@ -58,10 +68,11 @@
         padding: 10px;
         border-radius: 10px;
     }
-    button:hover{
+    .secao1>a>button:hover{
         font-size: 20px;
         padding: 15px;
         border-radius: 10px;
         transition: 0.5s;
+        cursor: pointer;
     }
 }

@@ -15,8 +15,6 @@
         width: 100%;
     }
 
-
-
     .retangulo1 {
         display: flex;
         flex-direction: column;
@@ -26,15 +24,9 @@
         padding-top: 50px;
         padding-bottom: 30px;
         font-size: 25px;
-
-
-
-
+        box-shadow: -8px -8px white;
         background: #67117B;
         border-radius: 30px;
-
-
-
     }
 
     .retangulo1>h1 {
@@ -93,25 +85,18 @@
 
     }
 
-
     .botaoentrar {
         color: #000;
         text-align: center;
         width: 100%;
-
-
-
     }
 
-
-
-
-
-
-
-
-
-
+    .botao-login{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 80px;
+    }
 
     .entrarretangulo p:link {
         color: #000;
@@ -121,12 +106,13 @@
         color: #000;
     }
 
-    .entrarretangulo p:hover {
-        color: #67117B;
-    }
-
     .entrarretangulo:hover {
         background-color: #fff;
+        padding: 5px;
+        transition: 0.5s;
+        .botaoentrar{
+            color: #67117B;
+        }
     }
 
     .entrarretangulo p {

@@ -10,15 +10,21 @@ export default function Menu() {
             <div className='Quadromenu'>
                 <div className='Content'>
                     <h1>Escolha a opção</h1>
-                    <div className='retangulomenu'>
-                        <Link className='botao' to='/album/menu'>Albuns</Link>
+                    <div>
+                        <Link className='retangulomenu' to='/artista/verif'>
+                            <p className='botao'>Artistas</p>
+                        </Link>
                     </div>
-                    <div className='retangulomenu'>
-                        <Link className='botao' to='/show/menu'>Shows</Link>
+                    <div>
+                        <Link className='retangulomenu' to='/album/verif'>
+                            <p className='botao' >Albuns</p>
+                        </Link>
                     </div>
-                    <div className='retangulomenu'>
-                        <Link className='botao' to='/artista/menu'>Artistas</Link>
-                    </div>
+                    <div>
+                        <Link className='retangulomenu' to='/show/verif'>
+                            <p className='botao'>Shows</p>
+                        </Link>
+                    </div>                    
                 </div>
             </div>
             <div>

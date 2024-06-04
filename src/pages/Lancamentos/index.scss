@@ -6,6 +6,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
+    min-height: 100vh;
 
     .Content {
         display: flex;
@@ -44,5 +45,4 @@
         gap: 100px;
         width: 100%;
     }
-
 }

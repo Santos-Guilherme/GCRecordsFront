@@ -2,6 +2,7 @@
     background-color: #000;
     color: #fff;
     width: 100%;
+    min-height: 100vh;
 
     h1 {
         font-size: 40px;
@@ -12,7 +13,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 60px;
+        gap: 20px;
         width: 100%;
     }
 
@@ -20,14 +21,46 @@
         text-align: center;
         font-size: 35px;
         margin-bottom: 40px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 30px;
     }
 
-    .content-lista-artistas {
+    .secao1>div {
+        width: 30%;
+    }
+
+    .secao1>div>a>button {
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .secao1>div>a>button:hover {
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .content-lista-albuns>div {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 30px;
         width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .content-lista-albuns {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        background-color: #67117B;
+        border-radius: 20px;
+        padding: 30px;
     }
 
     a {
@@ -38,5 +71,20 @@
         margin-top: 10px;
         border-radius: 10px;
         width: 100%;
+    }
+
+    .titulo>h2{
+        text-align: center;
+    }
+    .titulo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .filtros{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 40px;
     }
 }

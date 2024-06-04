@@ -2,7 +2,8 @@ import './index.scss';
 import Header from '../../components/HeaderMenu';
 import Footer from '../../components/Footer';
 import { useState } from 'react';
-import * as artistaApi from '../../Api/ArtistaApi'
+import * as artistaApi from '../../Api/ArtistaApi';
+import { toast } from 'react-toastify';
 
 export default function ArtistaCadastro() {
     const [nome, setNome] = useState('');
@@ -12,22 +13,52 @@ export default function ArtistaCadastro() {
     const [youtube, setYoutube] = useState('');
     const [spotify, setSpotify] = useState('');
     const [descricao, setDescricao] = useState('');
-    const [foto, setFoto] = useState('');
+    const [fotoCapa, setFotoCapa] = useState(null);
+    const [fotoSelfie, setFotoSelfie] = useState(null);
+    const [error, setError] = useState('');
 
-    async function salvarArtista() {
-        let corpo = {
-            "nome": nome,
-            "descBibliografia": descricao,
-            "linkInstagram": instagram,
-            "linkTiktok": tiktok,
-            "linkTwitter": twitter,
-            "linkYoutube": youtube,
-            "linkSpotify": spotify,
-            "imgCapa": "",
-            "imgSelfie": ""
+    async function salvarArtista(e) {
+        e.preventDefault();
+
+        if (!nome || !descricao || !fotoCapa || !fotoSelfie) {
+            toast.warning('Todos os campos são obrigatórios!');
+            return;
         }
-        artistaApi.salvarArtista(corpo);
-        limparCampos();
+
+        try {
+            const artistaExistente = await artistaApi.buscarArtistaPorNome(nome);
+            if (artistaExistente) {
+                toast.warning('Já existe um artista com esse nome.');
+                return;
+            }
+
+            let corpo = {
+                nome,
+                biografia: descricao,
+                instagram: instagram,
+                tiktok: tiktok,
+                twitter: twitter,
+                youtube: youtube,
+                spotify: spotify,
+            };
+
+            const artistaResponse = await artistaApi.salvarArtista(corpo);
+            const artistaId = artistaResponse.id;
+
+            const formData = new FormData();
+            formData.append('imagemCapa', fotoCapa);
+            formData.append('imagemSelfie', fotoSelfie);
+
+            await artistaApi.uploadImages(artistaId, formData);
+            limparCampos();
+            toast.success('Artista cadastrado com sucesso!');
+            
+        } catch (err) {
+            console.error('Erro ao cadastrar artista:', err);
+            if (err.response) {
+                console.error('Resposta do servidor:', err.response.data);
+            }
+        }
     };
 
     const limparCampos = () => {
@@ -38,7 +69,9 @@ export default function ArtistaCadastro() {
         setYoutube('');
         setSpotify('');
         setDescricao('');
-        setFoto('');
+        setFotoCapa(null);
+        setFotoSelfie(null);
+        setError('');
     };
 
     return (
@@ -48,9 +81,10 @@ export default function ArtistaCadastro() {
             </div>
             <div className='Content'>
                 <div className='titulo'>
-                    <h1> Adicionar Artista</h1>
+                    <h1>Adicionar Artista</h1>
                     <div className='QuadroCampos'>
-                        <form className='campos'>
+                        <form className='campos' onSubmit={salvarArtista}>
+                            {error && <div className="error">{error}</div>}
                             <div>
                                 <div>
                                     <p>Nome do Artista</p>
@@ -123,16 +157,24 @@ export default function ArtistaCadastro() {
                             </div>
                             <div>
                                 <div>
-                                    <p>Foto Do Artista</p>
+                                    <p>Foto de Capa</p>
                                 </div>
                                 <input
-                                    type='text'
-                                    value={foto}
-                                    onChange={(e) => setFoto(e.target.value)}
+                                    type='file'
+                                    onChange={(e) => setFotoCapa(e.target.files[0])}
+                                />
+                            </div>
+                            <div>
+                                <div>
+                                    <p>Foto Selfie</p>
+                                </div>
+                                <input
+                                    type='file'
+                                    onChange={(e) => setFotoSelfie(e.target.files[0])}
                                 />
                             </div>
                             <div className='adicionarretangulo'>
-                                <button type='submit' className='botaoadicionar' onClick={salvarArtista}>Adicionar</button>
+                                <button type='submit' className='botaoadicionar'>Adicionar</button>
                             </div>
                         </form>
                     </div>

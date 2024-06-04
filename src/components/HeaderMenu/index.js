@@ -10,7 +10,7 @@ export default function HeaderMenu() {
         <div className='HeaderMenu'>
             <header>
                 <Link onClick={GoBack}><img src="/assets/images/voltar.png" className='setinha' alt="setinha" /></Link>
-                <Link to='/'><img src="/assets/images/logo.png" className="App-logo" alt="logo" /></Link>
+                <Link to='/menu'><img src="/assets/images/logo.png" className="App-logo" alt="logo" /></Link>
 
                 <Link className='retangulo' to='/login'>
                     <p className='botaologin'>Sair</p>

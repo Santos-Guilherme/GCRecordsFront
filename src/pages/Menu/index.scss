@@ -10,7 +10,9 @@
     .Quadromenu {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        height: 100%;
     }
 
     .Content {
@@ -24,14 +26,21 @@
         font-size: 25px;
         background: #67117B;
         border-radius: 30px;
+        box-shadow: -8px -8px white;
     }
 
     .Content>h1 {
         font-size: 40px;
-        margin-bottom: 50px;
         text-wrap: wrap;
         width: 50%;
         text-align: center;
+    }
+
+    .Content>div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 80px;
     }
 
     .retangulomenu {
@@ -62,9 +71,10 @@
     .retangulomenu:hover {
         color: #67117B;
         background-color: #fff;
+        padding: 5px;
         transition: 0.5s;
-
-        a {
+        cursor: pointer;
+        .botao {
             color: #67117B;
         }
     }

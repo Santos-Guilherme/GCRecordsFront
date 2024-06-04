@@ -1,0 +1,42 @@
+.LinhaAlbuns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f49c9c9e;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+
+    p {
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .capa-album>img {
+        color: #000;
+        width: 100%;
+    }
+
+    .capa-album {
+        width: 200px;
+        height: 200px;
+    }
+
+    .icon-fuction {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .icon-function-img {
+        width: 20px;
+    }
+
+    .icon-function-img:hover {
+        cursor: pointer;
+    }
+}

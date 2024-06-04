@@ -1,15 +1,15 @@
 import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+import HeaderMenu from '../../components/HeaderMenu';
 import './index.scss';
 import LinhaShows from '../../components/LinhaShows';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { buscarArtistasporId } from '../../Api/ArtistaApi';
 import { API_ADDRESS } from '../../Api/constant';
 import { buscarAlbumPorArtista } from '../../Api/AlbumApi';
 import { buscarShowsPorArtista } from '../../Api/ShowApi';
 
-export default function ArtistaDetalhado(props) {
+export default function ArtistaVerifDetalhado(props) {
     const { id } = useParams();
     const [artistaBuscado, setArtistaBuscado] = useState(null);
     const [albuns, setAlbuns] = useState([]);
@@ -34,8 +34,8 @@ export default function ArtistaDetalhado(props) {
     }, [id]);
 
     return (
-        <div className='ArtistaDetalhado' key=''>
-            <Header></Header>
+        <div className='ArtistaVerifDetalhado' key=''>
+            <HeaderMenu></HeaderMenu>
             {artistaBuscado ? (
                 <div className='content'>
                     <section className='secao1'>
@@ -59,6 +59,8 @@ export default function ArtistaDetalhado(props) {
                                     <a href={artistaBuscado.twitter} target="_blank" rel="noopener noreferrer"><img src="/assets/images/redes/twitter.png" className="logo-redes" alt="Twitter" /></a>
                                     <a href={artistaBuscado.spotify} target="_blank" rel="noopener noreferrer"><img src="/assets/images/redes/spotify.png" className="logo-redes" alt="Spotify" /></a>
                                 </div>
+                                <Link to={`/artista/editar/${artistaBuscado.id}`}>Alterar</Link>
+                                <button>Deletar</button>
                             </div>
                         </div>
                     </section>
@@ -68,6 +70,8 @@ export default function ArtistaDetalhado(props) {
                             {albuns.map((album) => (
                                 <div className='imagem-album' key={album.id}>
                                     <a href={album.spotify} target='blank'><img src={`${API_ADDRESS}/${album.capa}`} alt={album.nome} className='img-album-artista'></img></a>
+                                    <p>{album.nome}</p>
+                                    <p>Id: {album.id}</p>
                                 </div>
                             ))}
                         </div>
@@ -75,8 +79,8 @@ export default function ArtistaDetalhado(props) {
                     <section id='show' className='secao4'>
                         <h1>Shows</h1>
                         <div>
-                            {shows.slice(0, 8).map((show) => (
-                                <LinhaShows key={show.id} nome={show.nome} data={show.data} />
+                            {shows.map((show) => (
+                                <LinhaShows nome={show.nome} data={show.data}></LinhaShows>
                             ))}
                         </div>
                     </section>

@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
-    
+
     const buscar = async () => {
     }
 
@@ -30,11 +30,11 @@ export default function Home() {
                             <input type='password'></input>
                         </div>
                     </div>
-                    <Link to='/menu' className='entrarretangulo'>
-                        <div>
+                    <div className='botao-login'>
+                        <Link to='/menu' className='entrarretangulo'>
                             <p className='botaoentrar' onClick={buscar}> Entrar</p>
-                        </div>
-                    </Link>
+                        </Link>
+                    </div>
                 </div>
             </div>
             <Footer></Footer>

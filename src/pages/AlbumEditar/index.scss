@@ -3,6 +3,7 @@
     color: #fff;
     width: 100%;
     font-family: 'Nosifer';
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -24,20 +25,15 @@
         padding-top: 50px;
         padding-bottom: 30px;
         font-size: 25px;
-
-
-
-
         background: #67117B;
+        box-shadow:-8px -8px white;
         border-radius: 30px;
-
-
-
     }
 
     .titulo>h1 {
         font-size: 40px;
         margin-bottom: 50px;
+        text-align: center;
     }
 
     .QuadroCampos {

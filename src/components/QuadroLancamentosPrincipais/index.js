@@ -29,21 +29,21 @@ export default function QuadroLancamentosPrincipais({ artistaId, nomeArtista }) 
     return (
         <div className='QuadroLancamentosPrincipais'>
             <div>
-                <img
+                <a href={albums[0].spotify} target='blank'><img
                     key={albums[0].id}
                     src={`${API_ADDRESS}/${albums[0].capa.replace(/\\/g, '/')}`}
                     className="img-album"
                     alt={albums[0].nome}
-                />
+                /></a>
             </div>
             <div><p>{nomeArtista}</p></div>
             <div>
-                <img
+                <a href={albums[1].spotify} target='blank'><img
                     key={albums[1].id}
                     src={`${API_ADDRESS}/${albums[1].capa.replace(/\\/g, '/')}`}
                     className="img-album"
                     alt={albums[1].nome}
-                />
+                /></a>
             </div>
         </div>
     );

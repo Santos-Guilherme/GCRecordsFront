@@ -24,6 +24,14 @@
         text-align: center;
     }
 
+    .content-paragrafo {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: 70%;
+        line-height: 35px;
+    }
+
     .div-paragrafo {
         display: flex;
         flex-direction: row;
@@ -33,5 +41,6 @@
 
     .Imagem-Sobre {
         width: 30%;
+        border-radius: 10px;
     }
 }

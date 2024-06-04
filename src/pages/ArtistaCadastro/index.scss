@@ -24,19 +24,14 @@
         padding-top: 50px;
         padding-bottom: 30px;
         font-size: 25px;
-
-
-
-
         background: #67117B;
         border-radius: 30px;
-
-
-
+        box-shadow:-8px -8px white;
     }
 
     .titulo>h1 {
         font-size: 40px;
+        text-align: center;
         margin-bottom: 50px;
     }
 
@@ -45,9 +40,7 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
-
     }
-
 
     .campos {
         display: flex;
@@ -55,7 +48,6 @@
         align-items: center;
         width: 100%;
         gap: 35px;
-
     }
 
     .campos>div {
@@ -77,9 +69,7 @@
         border-radius: 12px;
         border-color: #fff;
         width: 80%;
-
     }
-
 
     .adicionarretangulo {
         display: flex;
@@ -87,25 +77,14 @@
         align-items: center;
         width: 20%;
         height: 48px;
-
-
-        background: #f49c9c9e;
+        background: #fff;
         border-radius: 12px;
-
-
     }
-
-
-
-
 
     .botaoadicionar {
         color: #000;
         text-align: center;
         width: 100%;
-
-
-
     }
 
     .adicionarretangulo a:link {
@@ -123,6 +102,4 @@
     .adicionarretangulo:hover {
         background-color: #fff;
     }
-
-
 }

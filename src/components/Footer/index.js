@@ -7,14 +7,26 @@ export default function Footer() {
             <footer>
                 <div className='links-foot'>
                     <div className='container-nav-foot'>
-                        <p><Link to='/artistas'> Artistas</Link></p>
-                        <p><Link to='/sobre'> Sobre</Link></p>
+                        <p><Link to='/artistas'>Artistas</Link></p>
+                        <p><Link to='/sobre'>Sobre</Link></p>
                     </div>
                     <div className='container-redes-foot'>
-                        <a href='www.instagram.com'><img src="/assets/images/redes/instagram.png" className="logo-redes" alt="logo" /><p>Instagram</p></a>
-                        <a href='www.instagram.com'><img src="/assets/images/redes/tik-tok.png" className="logo-redes" alt="logo" /><p>Tiktok</p></a>
-                        <a href='www.instagram.com'><img src="/assets/images/redes/twitter.png" className="logo-redes" alt="logo" /><p>Twitter</p></a>
-                        <a href='www.instagram.com'><img src="/assets/images/redes/youtube.png" className="logo-redes" alt="logo" /><p>Youtube</p></a>
+                        <a href='https://www.instagram.com' target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/redes/instagram.png" className="logo-redes" alt="logo" />
+                            <p>Instagram</p>
+                        </a>
+                        <a href='https://www.tiktok.com' target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/redes/tik-tok.png" className="logo-redes" alt="logo" />
+                            <p>Tiktok</p>
+                        </a>
+                        <a href='https://www.twitter.com' target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/redes/twitter.png" className="logo-redes" alt="logo" />
+                            <p>Twitter</p>
+                        </a>
+                        <a href='https://www.youtube.com' target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/redes/youtube.png" className="logo-redes" alt="logo" />
+                            <p>Youtube</p>
+                        </a>
                     </div>
                 </div>
                 <div className='container-logo-foot'>
