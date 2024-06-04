@@ -28,14 +28,14 @@ export default function AlbumCadastro() {
         }
     };
 
-    const handleSubmit = async (e) => {
+    const cadastrarAlbum = async (e) => {
         e.preventDefault();
 
         const album = {
-            nome: nomeAlbum,
-            lancamento: dataLancamento,
-            spotify: spotify,
-            artista: artista
+            "nome": nomeAlbum,
+            "lancamento": dataLancamento,
+            "spotify": spotify,
+            "artista": artista
         };
 
         try {
@@ -70,7 +70,7 @@ export default function AlbumCadastro() {
             <div className='Content'>
                 <div className='titulo'>
                     <h1>Adicionar Álbum</h1>
-                    <form className='QuadroCampos' onSubmit={handleSubmit}>
+                    <form className='QuadroCampos' onSubmit={cadastrarAlbum}>
                         <div className='campos'>
                             <div>
                                 <div>

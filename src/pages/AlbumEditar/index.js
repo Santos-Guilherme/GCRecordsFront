@@ -30,7 +30,7 @@ export default function AlbumEditar() {
         }
     };
 
-    const handleSubmit = async (e) => {
+    const EditarAlbum = async (e) => {
         e.preventDefault();
 
         const formData = new FormData();
@@ -53,7 +53,7 @@ export default function AlbumEditar() {
             <div className='Content'>
                 <div className='titulo'>
                     <h1>Editar Capa do Álbum</h1>
-                    <form className='QuadroCampos' onSubmit={handleSubmit}>
+                    <form className='QuadroCampos' onSubmit={EditarAlbum}>
                         <div className='campos'>
                             <div>
                                 <div>

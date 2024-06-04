@@ -40,11 +40,11 @@ export default function AdicionarShows() {
             }
     
             const novoShow = {
-                nome: nomeShow,
-                artista: artistaSelecionado,
-                endereco: lugar,
-                data: dataHora,
-                festival: principal,
+                "nome": nomeShow,
+                "artista": artistaSelecionado,
+                "endereco": lugar,
+                "data": dataHora,
+                "festival": principal,
             };
             await salvarShow(novoShow);
             toast.success('Show adicionado com sucesso!');
