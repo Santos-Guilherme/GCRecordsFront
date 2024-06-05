@@ -23,13 +23,13 @@
         justify-content: center;
         margin-bottom: 50px;
     }
-    .voltar>div {
+    .voltar > div {
         width: 60%;
         display: flex;
         justify-content: flex-start;
     }
 
-    .voltar>div>a>img {
+    .voltar > div > a > img {
         width: 45px;
     }
 
@@ -43,17 +43,17 @@
         height: 30px;
     }
 
-    .secao1>div {
+    .secao1 > div {
         width: 30%;
     }
 
-    .secao1>div>a>button {
+    .secao1 > div > a > button {
         font-size: 20px;
         padding: 10px;
         border-radius: 10px;
     }
 
-    .secao1>div>a>button:hover {
+    .secao1 > div > a > button:hover {
         font-size: 20px;
         padding: 15px;
         border-radius: 10px;
@@ -67,13 +67,14 @@
         justify-content: center;
         gap: 20px;
         width: 80%;
+        overflow-x: auto; /* Adiciona barra de rolagem horizontal em dispositivos menores */
     }
 
     a {
         text-decoration: none;
     }
 
-    .titulo>select {
+    .titulo > select {
         margin-top: 10px;
         border-radius: 10px;
         width: 100%;
@@ -84,6 +85,7 @@
         justify-content: space-around;
         align-items: center;
         gap: 40px;
+        flex-wrap: wrap; /* Permite que os itens se ajustem conforme o tamanho da tela */
     }
 
     .info-tabela {
@@ -101,22 +103,53 @@
     }
 
     .funcao-tabela {
-        width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center; /* Centraliza o ícone de ação */
         align-items: center;
         padding-bottom: 10px;
     }
 
     .imagem-funcao-tabela {
         width: 20px;
-    }
-
-    .imagem-funcao-tabela:hover {
         cursor: pointer;
     }
 
     input {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    // Adição de regras de responsividade
+
+    @media screen and (max-width: 768px) {
+        .secao1 {
+            font-size: 25px;
+        }
+
+        .content-lista-shows {
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .secao1 {
+            font-size: 20px;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 80px;
+        }
+
+        .secao1 > div {
+            width: 100%;
+        }
+
+        .secao1 > div > a > button {
+            font-size: 16px;
+            padding: 8px;
+        }
+
+        .content-lista-shows {
+            width: 100%;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal em dispositivos menores */
+        }
     }
 }

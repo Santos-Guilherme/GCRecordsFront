@@ -23,7 +23,7 @@ export default function ArtistaCadastro() {
     async function salvarArtista(e) {
         e.preventDefault();
 
-        if (!nome || !descricao || !fotoCapa || !fotoSelfie) {
+        if (!nome || !instagram || !tiktok || !twitter|| !youtube || !spotify || !descricao || !fotoCapa || !fotoSelfie) {
             toast.warning('Todos os campos são obrigatórios!');
             return;
         }

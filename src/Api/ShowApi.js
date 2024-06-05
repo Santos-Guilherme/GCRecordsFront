@@ -2,9 +2,18 @@ import axios from 'axios';
 import { API_ADDRESS } from './constant';
 import { mensagemError } from './mensagemError'; // Importe a função mensagemError
 
+// Função auxiliar para obter o token JWT do localStorage
+function getAuthToken() {
+    return localStorage.getItem('token');
+}
+
 export const salvarShow = async (show) => {
     try {
-        const response = await axios.post(`${API_ADDRESS}/show`, show);
+        const response = await axios.post(`${API_ADDRESS}/show`, show, {
+            headers: {
+                'Authorization': `Bearer ${getAuthToken()}`
+            }
+        });
         return response.data;
     } catch (error) {
         mensagemError(error, 'Erro ao salvar show');
@@ -13,7 +22,11 @@ export const salvarShow = async (show) => {
 
 export const atualizarShow = async (show) => {
     try {
-        const response = await axios.put(`${API_ADDRESS}/show`, show);
+        const response = await axios.put(`${API_ADDRESS}/show`, show, {
+            headers: {
+                'Authorization': `Bearer ${getAuthToken()}`
+            }
+        });
         return response.data;
     } catch (error) {
         mensagemError(error, 'Erro ao atualizar show');
@@ -58,7 +71,11 @@ export const buscarShowsPorArtista = async (idArtista) => {
 
 export const cancelarShow = async (id) => {
     try {
-        const response = await axios.delete(`${API_ADDRESS}/show/${id}`);
+        const response = await axios.delete(`${API_ADDRESS}/show/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${getAuthToken()}`
+            }
+        });
         return response.data;
     } catch (error) {
         mensagemError(error, 'Erro ao cancelar show');

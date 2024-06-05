@@ -27,17 +27,17 @@
         height: 30px;
     }
 
-    .secao1>div {
+    .secao1 > div {
         width: 30%;
     }
 
-    .secao1>div>a>button {
+    .secao1 > div > a > button {
         font-size: 20px;
         padding: 10px;
         border-radius: 10px;
     }
 
-    .secao1>div>a>button:hover {
+    .secao1 > div > a > button:hover {
         font-size: 20px;
         padding: 15px;
         border-radius: 10px;
@@ -45,7 +45,7 @@
         cursor: pointer;
     }
 
-    .content-lista-albuns>div {
+    .content-lista-albuns > div {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -67,13 +67,13 @@
         text-decoration: none;
     }
 
-    .titulo>select {
+    .titulo > select {
         margin-top: 10px;
         border-radius: 10px;
         width: 100%;
     }
 
-    .titulo>h2 {
+    .titulo > h2 {
         text-align: center;
     }
 
@@ -88,24 +88,77 @@
         justify-content: space-around;
         align-items: center;
         gap: 40px;
+        width: 100%;
     }
+
     .voltar {
         width: 100%;
         display: flex;
         justify-content: center;
         margin-bottom: 50px;
     }
-    .voltar>div {
+
+    .voltar > div {
         width: 60%;
         display: flex;
         justify-content: flex-start;
     }
 
-    .voltar>div>a>img {
+    .voltar > div > a > img {
         width: 45px;
     }
-    
+
     input {
+        font-size: 30px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .secao1{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    .secao1 > div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filtros {
+        margin-top: 60px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content-lista-albuns {
+        width: 100%;
+    }
+
+    .voltar > div {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .secao1 {
+        font-size: 25px;
+    }
+
+    .filtros {
+        gap: 10px;
+    }
+
+    input {
+        font-size: 20px;
+        padding: 8px;
     }
 }

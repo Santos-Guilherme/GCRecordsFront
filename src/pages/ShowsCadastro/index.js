@@ -29,17 +29,23 @@ export default function AdicionarShows() {
         carregarArtistas();
     }, []);
 
-    const handleAdicionarShow = async () => {
+    const AdicionarShow = async () => {
+        // Verifica se algum campo está vazio
+        if (!nomeShow || !artistaSelecionado || !lugar || !horario || !data) {
+            toast.error('Por favor, preencha todos os campos antes de adicionar o show.');
+            return;
+        }
+    
         try {
             const dataHora = `${data}T${horario}:00`;
             const response = await verificarShowExistente(artistaSelecionado, dataHora);
             const existe = response.existe;
-
+    
             if (existe) {
                 toast.error('O artista já tem um show agendado para este dia e horário.');
                 return;
             }
-
+    
             const novoShow = {
                 "nome": nomeShow,
                 "artista": artistaSelecionado,
@@ -54,6 +60,7 @@ export default function AdicionarShows() {
             console.error('Erro ao adicionar show:', error);
         }
     };
+    
 
     const GoBack = () => {
         window.history.back();
@@ -117,10 +124,8 @@ export default function AdicionarShows() {
                                 </div>
                                 <input type='checkbox' checked={principal} onChange={(e) => setPrincipal(e.target.checked)} />
                             </div>
-                            <div className='adicionarretangulo'>
-                                <button className='botaoadicionar' onClick={handleAdicionarShow}>
-                                    Adicionar
-                                </button>
+                            <div className='botaoadicionar' onClick={AdicionarShow}>
+                                Adicionar
                             </div>
                         </div>
                     </div>

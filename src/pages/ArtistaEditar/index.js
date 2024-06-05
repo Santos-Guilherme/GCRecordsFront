@@ -5,10 +5,12 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import * as artistaApi from '../../Api/ArtistaApi';
 import { toast } from 'react-toastify';
+import { API_ADDRESS } from '../../Api/constant';
 
 export default function ArtistaEditar() {
     const { id } = useParams();
     const [nome, setNome] = useState('');
+    const [nomeAntigo, setNomeAntigo] = useState('');
     const [instagram, setInstagram] = useState('');
     const [tiktok, setTiktok] = useState('');
     const [twitter, setTwitter] = useState('');
@@ -17,7 +19,7 @@ export default function ArtistaEditar() {
     const [descricao, setDescricao] = useState('');
     const [fotoCapa, setFotoCapa] = useState(null);
     const [fotoSelfie, setFotoSelfie] = useState(null);
-    const [error, setError] = useState('');
+    const [error] = useState('');
     const [imgPreviewCapa, setImgPreviewCapa] = useState(null);
     const [imgPreviewSelfie, setImgPreviewSelfie] = useState(null);
 
@@ -32,6 +34,9 @@ export default function ArtistaEditar() {
                 setYoutube(artista.youtube);
                 setSpotify(artista.spotify);
                 setDescricao(artista.biografia);
+                setNomeAntigo(artista.nome);
+                setImgPreviewCapa(`${API_ADDRESS}/${artista.capa}`);
+                setImgPreviewSelfie(`${API_ADDRESS}/${artista.selfie}`);
             } catch (err) {
                 toast.error('Erro ao carregar artista.');
             }
@@ -41,13 +46,15 @@ export default function ArtistaEditar() {
 
     async function salvarAlteracoes(e) {
         e.preventDefault();
-
-        if (!nome || !descricao || !fotoCapa || !fotoSelfie) {
-            setError('Todos os campos são obrigatórios.');
-            return;
-        }
-
         try {
+            if (nomeAntigo !== nome) {
+                const artistaExistente = await artistaApi.buscarArtistaPorNome(nome);
+                if (artistaExistente) {
+                    toast.warning('Já existe um artista com esse nome.');
+                    return;
+                }
+            }
+
             let corpo = {
                 "nome": nome,
                 "biografia": descricao,
@@ -60,17 +67,31 @@ export default function ArtistaEditar() {
 
             await artistaApi.atualizarArtista(id, corpo);
 
-            const formData = new FormData();
-            formData.append('imagemCapa', fotoCapa);
-            formData.append('imagemSelfie', fotoSelfie);
+            if (fotoCapa && !fotoSelfie) {
+                const formData = new FormData();
+                formData.append('imagemCapa', fotoCapa);
 
-            await artistaApi.uploadImages(id, formData);
+                await artistaApi.atualizarImagemCapa(id, formData);
+            } else if (!fotoCapa && fotoSelfie) {
+                const formData = new FormData();
+                formData.append('imagemSelfie', fotoSelfie);
+
+                await artistaApi.atualizarImagemSelfie(id, formData);
+            } else if (fotoCapa && fotoSelfie) {
+                const formData = new FormData();
+                formData.append('imagemCapa', fotoCapa);
+                formData.append('imagemSelfie', fotoSelfie);
+
+                await artistaApi.uploadImages(id, formData);
+            }
+
             toast.success('Artista atualizado com sucesso!');
 
         } catch (err) {
             toast.error('Erro ao atualizar artista.');
         }
     };
+
     const GoBack = () => {
         window.history.back();
     };
@@ -186,13 +207,12 @@ export default function ArtistaEditar() {
                                     onChange={handleImageCapaChange}
                                 />
                                 <div className='imagem-preview-capa'>
-                                    <div>
+                                <div>
                                         {imgPreviewCapa && (
                                             <img src={imgPreviewCapa} alt="pré-visualização da capa" className="img-preview" />
                                         )}
                                     </div>
                                 </div>
-
                             </div>
                             <div>
                                 <div>

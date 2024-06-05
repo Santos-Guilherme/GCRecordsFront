@@ -14,6 +14,7 @@ export default function AlbumCadastro() {
     const [dataLancamento, setDataLancamento] = useState('');
     const [spotify, setSpotify] = useState('');
     const [fotoAlbum, setFotoAlbum] = useState(null);
+    const [imgPreviewAlbum, setImgPreviewAlbum] = useState(null);
 
     useEffect(() => {
         buscarArtistas();
@@ -67,6 +68,15 @@ export default function AlbumCadastro() {
         setFotoAlbum(null);
     };
 
+    const handleImageAlbumChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setFotoAlbum(file);
+            setImgPreviewAlbum(URL.createObjectURL(file));
+        }
+    };
+    
+
     return (
         <div className='AlbumCadastro'>
             <div className='Header'>
@@ -86,9 +96,9 @@ export default function AlbumCadastro() {
                                 <div>
                                     <p>Artista</p>
                                 </div>
-                                <select 
-                                    value={artista} 
-                                    onChange={(e) => setArtista(e.target.value)} 
+                                <select
+                                    value={artista}
+                                    onChange={(e) => setArtista(e.target.value)}
                                     required
                                 >
                                     <option value=''>Selecione um artista</option>
@@ -101,10 +111,10 @@ export default function AlbumCadastro() {
                                 <div>
                                     <p>Nome do Álbum</p>
                                 </div>
-                                <input 
-                                    type='text' 
-                                    value={nomeAlbum} 
-                                    onChange={(e) => setNomeAlbum(e.target.value)} 
+                                <input
+                                    type='text'
+                                    value={nomeAlbum}
+                                    onChange={(e) => setNomeAlbum(e.target.value)}
                                     required
                                 />
                             </div>
@@ -112,10 +122,10 @@ export default function AlbumCadastro() {
                                 <div>
                                     <p>Data de Lançamento</p>
                                 </div>
-                                <input 
-                                    type='date' 
-                                    value={dataLancamento} 
-                                    onChange={(e) => setDataLancamento(e.target.value)} 
+                                <input
+                                    type='date'
+                                    value={dataLancamento}
+                                    onChange={(e) => setDataLancamento(e.target.value)}
                                     required
                                 />
                             </div>
@@ -123,27 +133,34 @@ export default function AlbumCadastro() {
                                 <div>
                                     <p>Spotify</p>
                                 </div>
-                                <input 
-                                    type='text' 
-                                    value={spotify} 
-                                    onChange={(e) => setSpotify(e.target.value)} 
+                                <input
+                                    type='text'
+                                    value={spotify}
+                                    onChange={(e) => setSpotify(e.target.value)}
                                 />
                             </div>
-                            <div className='box'>
+                            <div>
                                 <div>
                                     <p>Foto do Álbum</p>
                                 </div>
-                                <input 
-                                    type="file" 
-                                    accept="image/*" 
-                                    onChange={(e) => setFotoAlbum(e.target.files[0])} 
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    onChange={handleImageAlbumChange}
                                 />
+                                <div className='imagem-preview-album'>
+                                    <div>
+                                        {imgPreviewAlbum && (
+                                            <img src={imgPreviewAlbum} alt="pré-visualização do álbum" className="img-preview" />
+                                        )}
+                                    </div>
+                                </div>
                             </div>
-                            <div className='adicionarretangulo'>
+
+                            
                                 <button className='botaoadicionar' type='submit'>
                                     Adicionar
                                 </button>
-                            </div>
                         </div>
                     </form>
                 </div>

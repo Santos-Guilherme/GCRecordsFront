@@ -42,7 +42,7 @@ const Header = () => {
                                 </li>
                                 {authToken && (
                                     <li>
-                                        <Link to="/menu">Menu</Link>
+                                        <Link to="/menu" className='retangulo'>Menu</Link>
                                     </li>
                                 )}
                                 {authToken && (

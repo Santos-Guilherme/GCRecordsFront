@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 import { uploadImagemAlbum, buscarAlbumPorId } from '../../Api/AlbumApi';
 import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { API_ADDRESS } from '../../Api/constant';
 
 export default function AlbumEditar() {
     const { id } = useParams();
@@ -12,6 +13,7 @@ export default function AlbumEditar() {
     const [nomeAlbum, setNomeAlbum] = useState('');
     const [fotoAlbum, setFotoAlbum] = useState(null);
     const [albumId, setAlbumId] = useState('');
+    const [imgPreviewAlbum, setImgPreviewAlbum] = useState(null);
 
     useEffect(() => {
         setAlbumId(id);
@@ -24,6 +26,7 @@ export default function AlbumEditar() {
             console.log('Detalhes do álbum:', album);
             setArtista(album.artista);
             setNomeAlbum(album.nome);
+            setImgPreviewAlbum(`${API_ADDRESS}/${album.capa}`);
         } catch (error) {
             console.error('Erro ao buscar detalhes do álbum:', error);
             toast.error('Erro ao buscar detalhes do álbum.');
@@ -32,6 +35,11 @@ export default function AlbumEditar() {
 
     const EditarAlbum = async (e) => {
         e.preventDefault();
+
+        if (!fotoAlbum) {
+            toast.info('Nenhuma alteração na capa do álbum.');
+            return;
+        }
 
         const formData = new FormData();
         formData.append('imagemCapa', fotoAlbum);
@@ -86,22 +94,32 @@ export default function AlbumEditar() {
                                     disabled
                                 />
                             </div>
-                            <div className='box'>
+                            <div>
                                 <div>
                                     <p>Foto do Álbum</p>
                                 </div>
-                                <input
+                                <input className='imagem-input'
                                     type="file"
                                     accept="image/*"
-                                    onChange={(e) => setFotoAlbum(e.target.files[0])}
+                                    onChange={(e) => {
+                                        setFotoAlbum(e.target.files[0]);
+                                        setImgPreviewAlbum(URL.createObjectURL(e.target.files[0]));
+                                    }}
                                     required
                                 />
+                                <div className='imagem-preview-album'>
+                                    <div>
+                                        {imgPreviewAlbum && (
+                                            <img src={imgPreviewAlbum} alt="pré-visualização da capa do álbum" className="img-preview" />
+                                        )}
+                                    </div>
+                                </div>
                             </div>
-                            <div className='adicionarretangulo'>
+
+                            
                                 <button className='botaoadicionar' type='submit'>
                                     Editar
                                 </button>
-                            </div>
                         </div>
                     </form>
                 </div>
