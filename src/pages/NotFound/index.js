@@ -7,7 +7,7 @@ export default function NotFound() {
         <div className='NotFound'>
             <Header></Header>
             <div className='content-not-found'>
-                <img src='/assets/images/notfound.png' alt='Página não encontrada'></img>
+                <img src='/assets/images/8E7EFF.png' alt='Página não encontrada'></img>
             </div>
             <Footer></Footer>
         </div>
