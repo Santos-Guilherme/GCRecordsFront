@@ -9,13 +9,7 @@ function getToken() {
 export async function buscarLancamentos() {
     let url = API_ADDRESS + '/album/lancamentos';
     try {
-        const token = getToken();
-        const config = {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        };
-        let r = await axios.get(url, config);
+        let r = await axios.get(url);
         return r.data;
     } catch (error) {
         mensagemError(error, 'Erro ao buscar lançamentos'); // Chame a função mensagemError
@@ -25,13 +19,7 @@ export async function buscarLancamentos() {
 export async function buscarAlbumPorArtista(id) {
     let url = API_ADDRESS + '/album/artista/' + id;
     try {
-        const token = getToken();
-        const config = {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        };
-        let r = await axios.get(url, config);
+        let r = await axios.get(url);
         return r.data;
     } catch (error) {
         mensagemError(error, 'Erro ao buscar álbuns por artista'); // Chame a função mensagemError
@@ -41,13 +29,7 @@ export async function buscarAlbumPorArtista(id) {
 export async function buscarUltimosDoisAlbunsPorArtista(id) {
     let url = API_ADDRESS + '/album/lancamentos/' + id;
     try {
-        const token = getToken();
-        const config = {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        };
-        let r = await axios.get(url, config);
+        let r = await axios.get(url);
         return r.data;
     } catch (error) {
         mensagemError(error, 'Erro ao buscar os últimos dois álbuns por artista'); // Chame a função mensagemError
@@ -72,13 +54,7 @@ export async function salvarAlbum(album) {
 
 export async function buscarTodosOsAlbuns() {
     try {
-        const token = getToken();
-        const config = {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        };
-        const response = await axios.get(`${API_ADDRESS}/album`, config);
+        const response = await axios.get(`${API_ADDRESS}/album`);
         return response.data;
     } catch (error) {
         mensagemError(error, 'Erro ao buscar álbuns'); // Chame a função mensagemError
@@ -87,13 +63,7 @@ export async function buscarTodosOsAlbuns() {
 
 export async function buscarAlbumPorId(id) {
     try {
-        const token = getToken();
-        const config = {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        };
-        const response = await axios.get(`${API_ADDRESS}/album/${id}`, config);
+        const response = await axios.get(`${API_ADDRESS}/album/${id}`);
         return response.data;
     } catch (error) {
         mensagemError(error, 'Erro ao buscar álbum por ID'); // Chame a função mensagemError
@@ -102,13 +72,7 @@ export async function buscarAlbumPorId(id) {
 
 export async function buscarAlbumsPorNome(nome) {
     try {
-        const token = getToken();
-        const config = {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        };
-        const resposta = await axios.get(`${API_ADDRESS}/album/filtro/nome/${nome}`, config);
+        const resposta = await axios.get(`${API_ADDRESS}/album/filtro/nome/${nome}`);
         return resposta.data;
     } catch (error) {
         mensagemError(error, 'Erro ao buscar álbuns por nome'); // Chame a função mensagemError
