@@ -15,6 +15,16 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
+    .secao1-content>div {
+        width: 60%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .secao1-content>div>a>img {
+        width: 45px;
+    }
+
     .Content {
         display: flex;
         flex-direction: column;
@@ -33,7 +43,7 @@
         justify-content: space-around;
     }
     .secao1-content{
-        width: 40%;
+        width: 30%;
         align-items: center;
         height: 50px;
     }

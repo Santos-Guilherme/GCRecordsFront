@@ -7,7 +7,6 @@ import ArtistaDetalhado from './pages/ArtistaDetalhado';
 import Artista from './pages/Artista';
 import Login from './pages/Login';
 import PrivateRoute from './privateRoute'; 
-
 import Menu from './pages/Menu';
 import ArtistaCadastro from './pages/ArtistaCadastro';
 import ArtistaEditar from './pages/ArtistaEditar';
@@ -18,6 +17,7 @@ import AlbumCadastro from './pages/AlbumCadastro';
 import AlbumEditar from './pages/AlbumEditar';
 import AlbumVerif from './pages/AlbumVerif';
 import ArtistaVerifDetalhado from './pages/ArtistaVerifDetalhado';
+import NotFound from './pages/NotFound';
 
 export default function Navegacao() {
   return (
@@ -30,6 +30,7 @@ export default function Navegacao() {
         <Route path='/artistas' element={<Artista />} />
         <Route path='/artista/:id' element={<ArtistaDetalhado />} />
         <Route path='/login' element={<Login />} />
+        <Route path='*' element={<NotFound />} />
         
         {/* Protegidas */}
         <Route path='/menu' element={<PrivateRoute element={Menu} />} />

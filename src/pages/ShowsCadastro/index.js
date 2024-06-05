@@ -1,10 +1,11 @@
 import './index.scss';
-import Header from '../../components/HeaderMenu';
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { useState, useEffect } from 'react';
-import { salvarShow, verificarShowExistente } from '../../Api/ShowApi'; 
+import { salvarShow, verificarShowExistente } from '../../Api/ShowApi';
 import * as artistaApi from '../../Api/ArtistaApi';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 export default function AdicionarShows() {
     const [artistas, setArtistas] = useState([]);
@@ -33,12 +34,12 @@ export default function AdicionarShows() {
             const dataHora = `${data}T${horario}:00`;
             const response = await verificarShowExistente(artistaSelecionado, dataHora);
             const existe = response.existe;
-    
+
             if (existe) {
                 toast.error('O artista já tem um show agendado para este dia e horário.');
                 return;
             }
-    
+
             const novoShow = {
                 "nome": nomeShow,
                 "artista": artistaSelecionado,
@@ -54,10 +55,19 @@ export default function AdicionarShows() {
         }
     };
 
+    const GoBack = () => {
+        window.history.back();
+    };
+
     return (
         <div className='AdicionarShows'>
             <div className='Header'>
                 <Header />
+            </div>
+            <div className='voltar'>
+                <div>
+                    <Link onClick={GoBack}><img src="/assets/images/voltar.png" className='setinha' alt="Voltar" /></Link>
+                </div>
             </div>
             <div className='Content'>
                 <div className='titulo'>

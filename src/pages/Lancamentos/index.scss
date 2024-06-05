@@ -45,4 +45,60 @@
         gap: 100px;
         width: 100%;
     }
+
+    @media (max-width: 1000px) {
+        h1 {
+            font-size: 35px;
+        }
+
+        .Content {
+            gap: 50px;
+        }
+
+        .lancamentos-content {
+            gap: 20px;
+        }
+
+        .lancamentos-principais {
+            gap: 80px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 30px;
+        }
+
+        .Content {
+            gap: 40px;
+        }
+
+        .lancamentos-content {
+            gap: 15px;
+        }
+
+        .lancamentos-principais {
+            gap: 60px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        font-size: 18px;
+
+        h1 {
+            font-size: 25px;
+        }
+
+        .Content {
+            gap: 30px;
+        }
+
+        .lancamentos-content {
+            gap: 10px;
+        }
+
+        .lancamentos-principais {
+            gap: 40px;
+        }
+    }
 }

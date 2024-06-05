@@ -3,7 +3,7 @@ import * as artistaApi from '../../Api/ArtistaApi'
 import Footer from '../../components/Footer';
 import QuadroBuscarArtistas from '../../components/QuadroBuscarArtistas';
 import { useEffect, useState } from 'react';
-import HeaderMenu from '../../components/HeaderMenu';
+import Header from '../../components/Header';
 import { toast } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert'
 import { Link } from 'react-router-dom';
@@ -37,7 +37,7 @@ export default function ArtistasVerif() {
     async function removerArtista(artista) {
         confirmAlert({
             title: 'Remover Artista',
-            message: 'Tem certeza que vai remover o artista?',
+            message: 'Tem certeza que vai remover o artista? Todos os albuns e shows deste artista serão excluídos também.',
             buttons: [
                 {
                     label: 'Sim',
@@ -52,13 +52,21 @@ export default function ArtistasVerif() {
             ]
         });
     }
+    const GoBack = () => {
+        window.history.back();
+    };
+
 
     return (
         <div className='ArtistasVerif'>
             <div className='Content'>
-                <HeaderMenu></HeaderMenu>
+                <Header></Header>
                 <div className='secao1'>
-                    <div className='secao1-content'></div>
+                <div className='secao1-content'>
+                        <div>
+                            <Link onClick={GoBack}><img src="/assets/images/voltar.png" className='setinha' alt="Voltar" /></Link>
+                        </div>
+                    </div>
                     <div className='secao1-content'><h1>Seus Artistas</h1></div>
                     <Link className='secao1-content' to={'/artista/cadastro'}><button>Novo</button></Link>
                 </div>

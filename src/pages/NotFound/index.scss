@@ -1,0 +1,11 @@
+.NotFound {
+    width: 100%;
+    .content-not-found{
+        display: flex;
+        justify-content: center;
+    }
+    .content-not-found>img{
+        width: 100%;
+        max-width: 300px;
+    }
+}

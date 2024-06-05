@@ -1,44 +1,68 @@
+import React, { useState } from 'react';
+import { FiLogOut } from 'react-icons/fi';
 import './index.scss';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function Header() {
+const Header = () => {
+
+    const [classOn, setClassOn] = useState(false);
+
     const navigate = useNavigate();
+    const authToken = localStorage.getItem('authToken');
 
     const handleLogout = () => {
         localStorage.removeItem('authToken');
         navigate('/login');
     };
 
-    const authToken = localStorage.getItem('authToken');
-
     return (
         <div className='Header'>
             <header>
-                <Link to='/'><img src="/assets/images/logo.png" className="App-logo" alt="logo" /></Link>
-                <ul>
-                    <li className='artista'>
-                        <Link to='/artistas'> Artistas</Link>
-                    </li>
-                    <li className='lancamento'>
-                        <Link to='/lancamentos'> Lançamento</Link>
-                    </li>
-                    <li className='shows'>
-                        <Link to='/shows'> Shows</Link>
-                    </li>
-                    <li className='sobre'>
-                        <Link to='/sobre'> Sobre</Link>
-                    </li>
-                </ul>
-                {authToken ? (
-                    <button className='retangulo' onClick={handleLogout}>
-                        <p className='botaologin'>Sair</p>
-                    </button>
-                ) : (
-                    <Link className='retangulo' to='/login'>
-                        <p className='botaologin'>Login</p>
-                    </Link>
-                )}
+                <div className="container">
+                    <div className={classOn ? 'menu-section on' : 'menu-section'} onClick={() => setClassOn(!classOn)}>
+                        <div className="menu-toggle">
+                            <div className="one"></div>
+                            <div className="two"></div>
+                            <div className="three"></div>
+                        </div>
+                        <nav>
+                            <ul>
+                                <Link to="/"><img className="logo-cyan" src="/assets/images/logo.png" alt="logo Cyan" /></Link>
+                                <li>
+                                    <Link to="/Artistas">Artistas</Link>
+                                </li>
+                                <li>
+                                    <Link to="/lancamentos">Lançamentos</Link>
+                                </li>
+                                <li>
+                                    <Link to="/shows">Shows</Link>
+                                </li>
+                                <li>
+                                    <Link to="/sobre">Sobre</Link>
+                                </li>
+                                {authToken && (
+                                    <li>
+                                        <Link to="/menu">Menu</Link>
+                                    </li>
+                                )}
+                                {authToken && (
+                                    <li>
+                                        <Link to="/login" onClick={handleLogout}>Sair<FiLogOut className="FiLogOut" /></Link>
+                                    </li>
+                                )}
+                                {!authToken && (
+                                    <li>
+                                        <Link to="/login" onClick={handleLogout}><p className='retangulo'>Login <FiLogOut className="FiLogOut" /></p></Link>
+                                    </li>
+                                )}
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
             </header>
         </div>
-    );
+    )
 }
+
+export default Header;

@@ -13,6 +13,7 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+        width: 100%;
     }
 
     .Content {
@@ -76,6 +77,62 @@
 
         .botao {
             color: #67117B;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .Content {
+            width: 60%;
+            font-size: 22px;
+            gap: 30px;
+        }
+
+        .Content>h1 {
+            font-size: 35px;
+            width: 70%;
+        }
+
+        .retangulomenu {
+            width: 70%;
+            height: 70px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .Content {
+            width: 80%;
+            font-size: 20px;
+            gap: 20px;
+        }
+
+        .Content>h1 {
+            font-size: 30px;
+            width: 80%;
+        }
+
+        .retangulomenu {
+            width: 80%;
+            height: 60px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .Content {
+            width: 90%;
+            font-size: 18px;
+            gap: 15px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .Content>h1 {
+            font-size: 25px;
+            width: 90%;
+        }
+
+        .retangulomenu {
+            width: 90%;
+            height: 50px;
         }
     }
 }

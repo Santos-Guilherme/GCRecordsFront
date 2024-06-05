@@ -42,4 +42,66 @@
         color: #3e007b;
         transition: 0.5s;
     }
+
+    @media (max-width: 1000px) {
+        .artista h1 {
+            font-size: 25px;
+        }
+
+        .imagemArtista {
+            width: 200px;
+            height: 190px;
+        }
+
+        span>div {
+            font-size: 25px;
+            width: 150px;
+        }
+
+        .artista>span {
+            margin: 0px 10px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .artista h1 {
+            font-size: 20px;
+        }
+
+        .imagemArtista {
+            width: 180px;
+            height: 170px;
+        }
+
+        span>div {
+            font-size: 20px;
+            width: 120px;
+        }
+
+        .artista>span {
+            margin: 0px 5px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .artista h1 {
+            font-size: 18px;
+        }
+
+        .imagemArtista {
+            width: 150px;
+            height: 140px;
+        }
+
+        span>div {
+            font-size: 18px;
+            width: 100px;
+        }
+
+        .artista>span {
+            flex-direction: column;
+            padding: 10px;
+            margin: 0px 0px;
+        }
+    }
 }

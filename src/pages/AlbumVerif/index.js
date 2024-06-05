@@ -3,12 +3,12 @@ import './index.scss';
 import * as artistaApi from '../../Api/ArtistaApi';
 import * as albumApi from '../../Api/AlbumApi';
 import Footer from '../../components/Footer';
-import HeaderMenu from '../../components/HeaderMenu';
 import { useEffect, useState } from 'react';
 import LinhaAlbuns from '../../components/LinhaAlbuns';
 import { toast } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
 import { Link } from 'react-router-dom';
+import Header from '../../components/Header';
 
 export default function AlbumVerif() {
     const [listaArtistas, setListaArtistas] = useState([]);
@@ -66,12 +66,21 @@ export default function AlbumVerif() {
         });
     }
 
+    const GoBack = () => {
+        window.history.back();
+    };
+
     return (
         <div className='AlbumVerif'>
             <div className='Content'>
-                <HeaderMenu></HeaderMenu>
+                <Header></Header>
+
                 <div className='secao1'>
-                    <div></div>
+                    <div className='voltar'>
+                        <div>
+                            <Link onClick={GoBack}><img src="/assets/images/voltar.png" className='setinha' alt="Voltar" /></Link>
+                        </div>
+                    </div>
                     <div>
                         <h1>Álbuns</h1>
                     </div>

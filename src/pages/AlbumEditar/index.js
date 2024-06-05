@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './index.scss';
-import Header from '../../components/HeaderMenu';
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { uploadImagemAlbum, buscarAlbumPorId } from '../../Api/AlbumApi';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 export default function AlbumEditar() {
@@ -45,10 +45,19 @@ export default function AlbumEditar() {
         }
     };
 
+    const GoBack = () => {
+        window.history.back();
+    };
+
     return (
         <div className='AlbumEditar'>
             <div className='Header'>
                 <Header />
+            </div>
+            <div className='voltar'>
+                <div>
+                    <Link onClick={GoBack}><img src="/assets/images/voltar.png" className='setinha' alt="Voltar" /></Link>
+                </div>
             </div>
             <div className='Content'>
                 <div className='titulo'>

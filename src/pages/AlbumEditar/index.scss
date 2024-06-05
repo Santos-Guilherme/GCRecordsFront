@@ -82,4 +82,19 @@
         background: #f49c9c9e;
         border-radius: 12px;
     }
+    .voltar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .voltar>div {
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .voltar>div>a>img {
+        width: 45px;
+    }
 }

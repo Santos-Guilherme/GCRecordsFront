@@ -64,7 +64,7 @@
         cursor: pointer;
     }
 
-    a{
+    a {
         text-decoration: none;
     }
 
@@ -79,5 +79,48 @@
     a:hover {
         color: #67117B;
         transition: 0.2s;
+    }
+
+    @media (max-width: 1000px) {
+        .links-foot {
+            font-size: 16px;
+            gap: 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        footer {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .links-foot {
+            font-size: 14px;
+            gap: 20px;
+        }
+
+        .container-logo-foot {
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .logo-foot {
+            display: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .links-foot {
+            font-size: 12px;
+            gap: 10px;
+        }
+
+        .container-redes-foot {
+            align-items: center;
+        }
+
+        .container-redes-foot>a>p {
+            font-size: 12px;
+        }
     }
 }

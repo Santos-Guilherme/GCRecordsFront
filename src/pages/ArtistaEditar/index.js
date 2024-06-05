@@ -1,8 +1,8 @@
 import './index.scss';
-import Header from '../../components/HeaderMenu';
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import * as artistaApi from '../../Api/ArtistaApi';
 import { toast } from 'react-toastify';
 
@@ -18,6 +18,8 @@ export default function ArtistaEditar() {
     const [fotoCapa, setFotoCapa] = useState(null);
     const [fotoSelfie, setFotoSelfie] = useState(null);
     const [error, setError] = useState('');
+    const [imgPreviewCapa, setImgPreviewCapa] = useState(null);
+    const [imgPreviewSelfie, setImgPreviewSelfie] = useState(null);
 
     useEffect(() => {
         async function carregarArtista() {
@@ -69,11 +71,33 @@ export default function ArtistaEditar() {
             toast.error('Erro ao atualizar artista.');
         }
     };
+    const GoBack = () => {
+        window.history.back();
+    };
+
+    const handleImageCapaChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setFotoCapa(file);
+            setImgPreviewCapa(URL.createObjectURL(file));
+        }
+    };
+
+    const handleImageSelfieChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setFotoSelfie(file);
+            setImgPreviewSelfie(URL.createObjectURL(file));
+        }
+    };
 
     return (
         <div className='ArtistaEditar'>
             <div className='Header'>
                 <Header></Header>
+            </div>
+            <div className='voltar'>
+                <Link onClick={GoBack}><img src="/assets/images/voltar.png" className='setinha' alt="Voltar" /></Link>
             </div>
             <div className='Content'>
                 <div className='titulo'>
@@ -159,9 +183,16 @@ export default function ArtistaEditar() {
                                 </div>
                                 <input
                                     type='file'
-                                    onChange={(e) => setFotoCapa(e.target.files[0])}
-                                    required
+                                    onChange={handleImageCapaChange}
                                 />
+                                <div className='imagem-preview-capa'>
+                                    <div>
+                                        {imgPreviewCapa && (
+                                            <img src={imgPreviewCapa} alt="pré-visualização da capa" className="img-preview" />
+                                        )}
+                                    </div>
+                                </div>
+
                             </div>
                             <div>
                                 <div>
@@ -169,9 +200,15 @@ export default function ArtistaEditar() {
                                 </div>
                                 <input
                                     type='file'
-                                    onChange={(e) => setFotoSelfie(e.target.files[0])}
-                                    required
+                                    onChange={handleImageSelfieChange}
                                 />
+                                <div className='imagem-preview-selfie'>
+                                    <div>
+                                        {imgPreviewSelfie && (
+                                            <img src={imgPreviewSelfie} alt="pré-visualização da selfie" className="img-preview" />
+                                        )}
+                                    </div>
+                                </div>
                             </div>
                             <div className='editarretangulo'>
                                 <button type='submit' className='botaoeditar'>Editar</button>

@@ -7,7 +7,7 @@
     font-weight: 500;
     font-size: 20px;
     min-height: 100vh;
-    
+
     h1 {
         font-size: 40px;
     }
@@ -39,5 +39,21 @@
         justify-content: center;
         gap: 100px;
         width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 25px;
+        }
+
+        .shows-title {
+            font-size: 30px;
+        }
     }
 }

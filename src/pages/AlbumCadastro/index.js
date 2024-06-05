@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './index.scss';
-import Header from '../../components/HeaderMenu';
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { salvarAlbum, uploadImagemAlbum } from '../../Api/AlbumApi'; // Importe a função uploadImagemAlbum da API de Álbuns
+import { salvarAlbum, uploadImagemAlbum } from '../../Api/AlbumApi';
 import * as artistaApi from '../../Api/ArtistaApi';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 export default function AlbumCadastro() {
     const [listaArtistas, setListaArtistas] = useState([]);
@@ -26,6 +27,10 @@ export default function AlbumCadastro() {
             console.error('Erro ao buscar artistas:', error);
             toast.error('Erro ao buscar artistas.');
         }
+    };
+
+    const GoBack = () => {
+        window.history.back();
     };
 
     const cadastrarAlbum = async (e) => {
@@ -66,6 +71,11 @@ export default function AlbumCadastro() {
         <div className='AlbumCadastro'>
             <div className='Header'>
                 <Header />
+            </div>
+            <div className='voltar'>
+                <div>
+                    <Link onClick={GoBack}><img src="/assets/images/voltar.png" className='setinha' alt="Voltar" /></Link>
+                </div>
             </div>
             <div className='Content'>
                 <div className='titulo'>

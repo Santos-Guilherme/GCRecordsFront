@@ -12,6 +12,42 @@
         gap: 20px;
     }
 
+    .funcao-page {
+        text-decoration: none;
+        background-color: #000;
+        color: #fff;
+    }
+
+    .voltar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .voltar>div {
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .voltar>div>a>img {
+        width: 45px;
+    }
+
+    .funcao-page:link {
+        color: #fff;
+    }
+
+    .funcao-page:visited {
+        color: #fff;
+    }
+
+    .funcao-page:hover {
+        color: #67117B;
+        transition: 0.2s;
+    }
+
     h1 {
         font-size: 40px;
     }
@@ -100,12 +136,12 @@
 
         div {
             display: flex;
-            flex-direction: column;
             gap: 10px;
         }
 
         .imagem-album {
-            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
         }
 
         .img-album-artista {
@@ -145,4 +181,26 @@
         width: 100%;
         gap: 20px;
     }
+    @media screen and (max-width: 768px) {
+        .imagem-perfil {
+            display: none;
+        }
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .secao1>img{
+            width: 80%;
+        }
+        .content-secao2>h2{
+            font-size: 15px;
+        }
+        .show>div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
 }

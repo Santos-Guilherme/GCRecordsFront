@@ -1,84 +1,198 @@
-.Header {
+.Header{
     width: 100%;
-    font-size: 20px;
-
-    .App-logo {
-        width: 120px;
-    }
-
     header {
-        display: flex;
-        flex-flow: row;
         width: 100%;
-        justify-content: space-evenly;
+        height: 150px;
+        background-color: #000;    
     }
-
-    ul {
-        align-items: center;
-        display: flex;
-        gap: 20px;
-    }
-
+    
     .retangulo {
-        display: flex;
-        align-self: center;
-        justify-content: center;
-        align-items: center;
-        width: 162px;
-        height: 48px;
-
         background: #67117B;
-        border-radius: 20px;
-        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
     }
-
-    li {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        color: #FFFFFF;
-        list-style: none;
-        text-align: center;
-    }
-
-    div {
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    a:link {
-        color: #fff;
-    }
-
-    a:visited {
-        color: #fff;
-    }
-
-    a:hover {
-        color: #67117B;
-        transition: 0.2s;
-    }
-
-    span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
+    
     .retangulo:hover {
         background: #fff;
         color: #67117B;
         cursor: pointer;
         transition: 0.3s;
-
+    
         a {
             color: #67117B;
             transition: 0.3s;
         }
+    }
+    
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+    header img {
+        height: 150px;
+    }
+    
+    header nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    header nav ul {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    header nav ul li {
+        list-style: none;
+    }
+    
+    header nav ul li a {
+        text-decoration: none;
+        color: rgb(241, 239, 239);
+        font-size: 1.2rem;
+    }
+    
+    header nav ul li a:hover {
+        color: #67117B;
+        transition: 0.3s;
+    }
+    
+    header nav ul li a {
+        position: relative;
+        animation-name: menu;
+        animation-duration: 1s;
+        transition: 100ms;
+    }
+    
+    .menu-section{
+        width: 90%;
+        display: flex;
+    }
+    header nav ul li a .FiLogOut {
+        position: relative;
+        top: 2px;
+        left: 2px;
+    }
+    
+    @media (max-width: 630px) {
+        html {
+            font-size: 70%;
+        }
+    
+        .hero .container {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .form-group {
+            display: block;
+        }
+    }
+    
+    @media (max-width: 1120px) {
+        .Header{
+            height: 50px;
+        }
+        .menu-section nav {
+            display: none;
+        }
+    
+        .one,
+        .two,
+        .three {
+            background-color: #ffffff;
+            height: 5px;
+            width: 100%;
+            margin: 13px auto;
+            transition-duration: 0.3s;
+        }
+    
+        .menu-toggle {
+            width: 40px;
+            height: 30px;
+            margin-right: 20px;
+        }
+    
+        /*Fullscreen*/
+        .menu-section.on {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #7259c1;
+            z-index: 10;
+            /*camada acima, evitar o scrool dos itens a baixo*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .menu-section.on nav {
+            display: block;
+        }
+    
+    
+        .menu-section.on .menu-toggle {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+        }
+    
+    
+        .menu-section.on .menu-toggle .one {
+            transform: rotate(45deg) translate(7px, 7px);
+            background-color: #fff;
+        }
+    
+        .menu-section.on .menu-toggle .two {
+            opacity: 0;
+    
+        }
+    
+        .menu-section.on .menu-toggle .three {
+            transform: rotate(-45deg) translate(8px, -9px);
+            background-color: #fff;
+        }
+    
+        .menu-section.on nav ul {
+            text-align: center;
+            display: block;
+        }
+    
+        .menu-section.on nav ul a {
+            transition-duration: 0.5s;
+            font-size: 2.0rem;
+            display: block;
+            color: #fff;
+            padding: 1.8rem;
+        }
+    
+        header nav ul li a .FiLogOut {
+            width: 40px;
+        }
+    
+        .menu-section.on nav ul .hide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0rem;
+            font-size: 1.6rem;
+        }
+    
+    }
+    
+    @media (max-width: 320px) {
+        #form h3 {
+            font-size: 2rem;
+        }
+    
     }
 }

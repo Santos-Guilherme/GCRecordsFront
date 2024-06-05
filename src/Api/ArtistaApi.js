@@ -1,49 +1,68 @@
 import axios from "axios";
-
 import { API_ADDRESS } from './constant';
+import { mensagemError } from './mensagemError';
 
 export async function buscarArtistas() {
     let url = API_ADDRESS + '/artista';
-
-    let r = await axios.get(url);
-    return r.data;
+    try {
+        let r = await axios.get(url);
+        return r.data;
+    } catch (error) {
+        mensagemError(error, 'Erro ao buscar artistas');
+    }
 }
 
 export async function salvarArtista(corpo) {
     let url = API_ADDRESS + '/artista';
-
-    let r = await axios.post(url, corpo);
-    return r.data;
+    try {
+        let r = await axios.post(url, corpo);
+        return r.data;
+    } catch (error) {
+        mensagemError(error, 'Erro ao salvar artista');
+    }
 }
 
 export async function uploadImages(id, formData) {
-    const response = await axios.put(`${API_ADDRESS}/artista/imagens/${id}`, formData, {
-        headers: {
-            'Content-Type': 'multipart/form-data'
-        }
-    });
-    return response;
+    try {
+        const response = await axios.put(`${API_ADDRESS}/artista/imagens/${id}`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
+        return response.data;
+    } catch (error) {
+        mensagemError(error, 'Erro ao fazer upload das imagens do artista');
+    }
 }
 
 export async function removerArtista(id) {
-    let url = API_ADDRESS + '/artista/'+ id;
-
-    let r = await axios.delete(url);
-    return r.data;
+    let url = API_ADDRESS + '/artista/' + id;
+    try {
+        let r = await axios.delete(url);
+        return r.data;
+    } catch (error) {
+        mensagemError(error, 'Erro ao remover artista');
+    }
 }
 
 export async function buscarArtistasporId(id) {
-    let url = (`${API_ADDRESS}/artista/${id}`);
-
-    let r = await axios.get(url);
-    return r.data;
+    let url = `${API_ADDRESS}/artista/${id}`;
+    try {
+        let r = await axios.get(url);
+        return r.data;
+    } catch (error) {
+        mensagemError(error, 'Erro ao buscar artista por ID');
+    }
 }
 
 export async function atualizarArtista(id, corpo) {
     let url = API_ADDRESS + '/artista/' + id;
-
-    let r = await axios.put(url, corpo);
-    return r.data;
+    try {
+        let r = await axios.put(url, corpo);
+        return r.data;
+    } catch (error) {
+        mensagemError(error, 'Erro ao atualizar artista');
+    }
 }
 
 export async function buscarArtistaPorNome(nome) {
@@ -54,7 +73,7 @@ export async function buscarArtistaPorNome(nome) {
         if (error.response && error.response.status === 404) {
             return null;
         }
-        throw error;
+        mensagemError(error, 'Erro ao buscar artista por nome');
     }
 }
 
@@ -66,6 +85,6 @@ export async function filtrarArtistasPorNome(nome) {
         if (error.response && error.response.status === 404) {
             return null;
         }
-        throw error;
+        mensagemError(error, 'Erro ao filtrar artistas por nome');
     }
 }

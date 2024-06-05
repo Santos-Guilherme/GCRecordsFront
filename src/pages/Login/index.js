@@ -12,16 +12,19 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
+    if (!usuario || !senha) {
+      toast.error('Por favor, preencha todos os campos.');
+      return;
+    }
+
     const loginData = { nome: usuario, senha: senha };
 
     try {
       const response = await buscarLogin(loginData);
-      console.log(response.token);
       localStorage.setItem('authToken', response.token);
-      toast.success('Login realizado com sucesso!');
       navigate('/menu');
     } catch (error) {
-      toast.error('Usuário ou senha inválidos');
+      alert("Usuário ou senha inválidos");
     }
   };
 
@@ -47,8 +50,8 @@ export default function Login() {
               <input type='password' value={senha} onChange={(e) => setSenha(e.target.value)} />
             </div>
           </div>
-          <div className='botao-login'>
-            <button onClick={handleLogin}>Entrar</button>
+          <div className='botao-entrar' onClick={handleLogin}>
+            Entrar
           </div>
         </div>
       </div>

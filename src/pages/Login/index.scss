@@ -71,7 +71,7 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
-    .entrarretangulo {
+    .botao-entrar {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,19 +79,9 @@
         height: 48px;
         background: #f49c9c9e;
         border-radius: 12px;
-    }
-
-    .botaoentrar {
         color: #000;
         text-align: center;
-        width: 100%;
-    }
-
-    .botao-login {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        height: 80px;
+        width: 50%;
     }
 
     .entrarretangulo p:link {
@@ -102,10 +92,10 @@
         color: #000;
     }
 
-    .entrarretangulo:hover {
+    .botao-entrar:hover {
         background-color: #fff;
-        padding: 5px;
         transition: 0.5s;
+        cursor: pointer;
 
         .botaoentrar {
             color: #67117B;

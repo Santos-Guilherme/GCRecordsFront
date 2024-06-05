@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import './index.scss';
 import * as artistaApi from '../../Api/ArtistaApi';
 import Footer from '../../components/Footer';
-import HeaderMenu from '../../components/HeaderMenu';
+import Header from '../../components/Header';
 import { cancelarShow, buscarShowPorId, consultarShowsData, consultarShowsPrincipaisData, consultarShowsPorArtistaeData, consultarShowsArtistaPrincipaisData } from '../../Api/ShowApi';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -92,12 +92,21 @@ export default function ShowsVerif() {
         return `${day}/${month}/${year}`;
     };
 
+    const GoBack = () => {
+        window.history.back();
+    };
+
+
     return (
         <div className='ShowsVerif'>
             <div className='Content'>
-                <HeaderMenu />
+                <Header />
                 <div className='secao1'>
-                    <div></div>
+                    <div className='voltar'>
+                        <div>
+                            <Link onClick={GoBack}><img src="/assets/images/voltar.png" className='setinha' alt="Voltar" /></Link>
+                        </div>
+                    </div>                    
                     <div>
                         <h1>Show</h1>
                     </div>

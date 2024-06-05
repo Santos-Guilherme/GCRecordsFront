@@ -1,19 +1,22 @@
 import Footer from '../../components/Footer';
-import HeaderMenu from '../../components/HeaderMenu';
 import './index.scss';
 import LinhaShows from '../../components/LinhaShows';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { buscarArtistasporId } from '../../Api/ArtistaApi';
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import { buscarArtistasporId, removerArtista } from '../../Api/ArtistaApi';
 import { API_ADDRESS } from '../../Api/constant';
 import { buscarAlbumPorArtista } from '../../Api/AlbumApi';
 import { buscarShowsPorArtista } from '../../Api/ShowApi';
+import { confirmAlert } from 'react-confirm-alert';
+import { toast } from 'react-toastify';
+import Header from '../../components/Header';
 
 export default function ArtistaVerifDetalhado(props) {
     const { id } = useParams();
     const [artistaBuscado, setArtistaBuscado] = useState(null);
     const [albuns, setAlbuns] = useState([]);
     const [shows, setShows] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const buscar = async () => {
@@ -33,9 +36,36 @@ export default function ArtistaVerifDetalhado(props) {
         buscarShows();
     }, [id]);
 
+    async function deletarArtista() {
+        confirmAlert({
+            title: 'Remover Artista',
+            message: 'Tem certeza que vai remover o artista? Todos os albuns e shows deste artista serão excluídos também.',
+            buttons: [
+                {
+                    label: 'Sim',
+                    onClick: async () => {
+                        await removerArtista(id);
+                        toast.dark('✅ Artista removido com sucesso.');
+                        navigate('/artista/verif');
+                    }
+                },
+                { label: 'Não' }
+            ]
+        });
+    }
+
+    const GoBack = () => {
+        window.history.back();
+    };
+
     return (
         <div className='ArtistaVerifDetalhado' key=''>
-            <HeaderMenu></HeaderMenu>
+            <Header></Header>
+            <div className='voltar'>
+                <div>
+                    <Link onClick={GoBack}><img src="/assets/images/voltar.png" className='setinha' alt="Voltar" /></Link>
+                </div>
+            </div>
             {artistaBuscado ? (
                 <div className='content'>
                     <section className='secao1'>
@@ -59,8 +89,8 @@ export default function ArtistaVerifDetalhado(props) {
                                     <a href={artistaBuscado.twitter} target="_blank" rel="noopener noreferrer"><img src="/assets/images/redes/twitter.png" className="logo-redes" alt="Twitter" /></a>
                                     <a href={artistaBuscado.spotify} target="_blank" rel="noopener noreferrer"><img src="/assets/images/redes/spotify.png" className="logo-redes" alt="Spotify" /></a>
                                 </div>
-                                <Link to={`/artista/editar/${artistaBuscado.id}`}>Alterar</Link>
-                                <button>Deletar</button>
+                                <Link to={`/artista/editar/${artistaBuscado.id}`} className='funcao-page'>Alterar</Link>
+                                <button onClick={deletarArtista} className='funcao-page'>Deletar</button>
                             </div>
                         </div>
                     </section>

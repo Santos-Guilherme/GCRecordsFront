@@ -145,4 +145,26 @@
         width: 100%;
         gap: 20px;
     }
+    @media screen and (max-width: 768px) {
+        .imagem-perfil {
+            display: none;
+        }
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .secao1>img{
+            width: 80%;
+        }
+        .content-secao2>h2{
+            font-size: 15px;
+        }
+        .show>div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
 }

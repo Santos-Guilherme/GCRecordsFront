@@ -3,13 +3,14 @@
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-    
-    div{
+
+    div {
         display: flex;
         justify-content: center;
         width: 50%;
         align-items: center;
     }
+
     p {
         display: flex;
         width: 200px;
@@ -22,5 +23,60 @@
         width: 150px;
         background-size: cover;
         object-fit: cover;
+    }
+
+    @media (max-width: 1000px) {
+        div {
+            width: 60%;
+        }
+
+        p {
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .img-album {
+            height: 120px;
+            width: 120px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        div {
+            width: 80%;
+        }
+
+        p {
+            width: 100%;
+            text-align: center;
+        }
+
+        .img-album {
+            height: 100px;
+            width: 100px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        div {
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        p {
+            width: 80%;
+            font-size: 12px;
+        }
+
+        .img-album {
+            height: 80px;
+            width: 80px;
+        }
     }
 }

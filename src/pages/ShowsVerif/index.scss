@@ -17,6 +17,22 @@
         width: 100%;
     }
 
+    .voltar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .voltar>div {
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .voltar>div>a>img {
+        width: 45px;
+    }
+
     .secao1 {
         text-align: center;
         font-size: 35px;

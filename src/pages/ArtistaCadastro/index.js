@@ -1,9 +1,10 @@
 import './index.scss';
-import Header from '../../components/HeaderMenu';
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { useState } from 'react';
 import * as artistaApi from '../../Api/ArtistaApi';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 export default function ArtistaCadastro() {
     const [nome, setNome] = useState('');
@@ -16,6 +17,8 @@ export default function ArtistaCadastro() {
     const [fotoCapa, setFotoCapa] = useState(null);
     const [fotoSelfie, setFotoSelfie] = useState(null);
     const [error, setError] = useState('');
+    const [imgPreviewCapa, setImgPreviewCapa] = useState(null);
+    const [imgPreviewSelfie, setImgPreviewSelfie] = useState(null);
 
     async function salvarArtista(e) {
         e.preventDefault();
@@ -52,7 +55,7 @@ export default function ArtistaCadastro() {
             await artistaApi.uploadImages(artistaId, formData);
             limparCampos();
             toast.success('Artista cadastrado com sucesso!');
-            
+
         } catch (err) {
             console.error('Erro ao cadastrar artista:', err);
             if (err.response) {
@@ -72,12 +75,37 @@ export default function ArtistaCadastro() {
         setFotoCapa(null);
         setFotoSelfie(null);
         setError('');
+        setImgPreviewCapa(null);
+        setImgPreviewSelfie(null);
+    };
+
+    const handleImageCapaChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setFotoCapa(file);
+            setImgPreviewCapa(URL.createObjectURL(file));
+        }
+    };
+
+    const handleImageSelfieChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setFotoSelfie(file);
+            setImgPreviewSelfie(URL.createObjectURL(file));
+        }
+    };
+
+    const GoBack = () => {
+        window.history.back();
     };
 
     return (
         <div className='ArtistaCadastro'>
             <div className='Header'>
                 <Header />
+            </div>
+            <div className='voltar'>
+                <Link onClick={GoBack}><img src="/assets/images/voltar.png" className='setinha' alt="Voltar" /></Link>
             </div>
             <div className='Content'>
                 <div className='titulo'>
@@ -161,8 +189,16 @@ export default function ArtistaCadastro() {
                                 </div>
                                 <input
                                     type='file'
-                                    onChange={(e) => setFotoCapa(e.target.files[0])}
+                                    onChange={handleImageCapaChange}
                                 />
+                                <div className='imagem-preview-capa'>
+                                    <div>
+                                        {imgPreviewCapa && (
+                                            <img src={imgPreviewCapa} alt="pré-visualização da capa" className="img-preview" />
+                                        )}
+                                    </div>
+                                </div>
+
                             </div>
                             <div>
                                 <div>
@@ -170,8 +206,15 @@ export default function ArtistaCadastro() {
                                 </div>
                                 <input
                                     type='file'
-                                    onChange={(e) => setFotoSelfie(e.target.files[0])}
+                                    onChange={handleImageSelfieChange}
                                 />
+                                <div className='imagem-preview-selfie'>
+                                    <div>
+                                        {imgPreviewSelfie && (
+                                            <img src={imgPreviewSelfie} alt="pré-visualização da selfie" className="img-preview" />
+                                        )}
+                                    </div>
+                                </div>
                             </div>
                             <div className='adicionarretangulo'>
                                 <button type='submit' className='botaoadicionar'>Adicionar</button>

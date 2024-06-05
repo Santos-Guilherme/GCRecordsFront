@@ -6,6 +6,9 @@
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 
     .Content {
         display: flex;
@@ -29,7 +32,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        width: 80%;
+        width: 100%;
         max-width: 1200px;
         height: 220px;
         border-radius: 10px;
@@ -47,6 +50,7 @@
         display: flex;
         flex-direction: column;
         line-height: 70px;
+        font-size: 40px;
         width: 100%;
         margin-bottom: 30px;
     }
@@ -59,10 +63,9 @@
         border-radius: 8px;
         width: 210px;
         height: 200px;
-
     }
 
-    .Content-section{
+    .Content-section {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -133,6 +136,50 @@
         h1 {
             color: #67117B;
             transition: 0.4s;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 18px;
+        .secao1{
+            width: 100%;
+            font-size: 80px;
+        }
+        .secao1>div{
+            background-image: none;
+            background-color: #67117B;
+            
+        }
+        .secao2>div,
+        .Sobre-div {
+            font-size: 30px;
+            padding-left: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+
+        .secao1>div,
+        .secao2>div,
+        .Sobre-div {
+            width: 100%;
+            font-size: 25px;
+            padding-left: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+
+        .secao1>div,
+        .secao2>div,
+        .Sobre-div {
+            width: 100vh;
+            font-size: 20px;
+            padding-left: 10px;
+
+            background-size:cover;
         }
     }
 }

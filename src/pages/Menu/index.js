@@ -1,12 +1,12 @@
 import './index.scss';
-import HeaderMenu from '../../components/HeaderMenu';
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
+import Header from '../../components/Header';
 
 export default function Menu() {
     return (
         <div className='Menu'>
-            <HeaderMenu></HeaderMenu>
+            <Header></Header>
             <div className='Quadromenu'>
                 <div className='Content'>
                     <h1>Escolha a opção</h1>
