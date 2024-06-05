@@ -1,13 +1,21 @@
 import './index.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Header() {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem('authToken');
+        navigate('/login');
+    };
+
+    const authToken = localStorage.getItem('authToken');
+
     return (
         <div className='Header'>
             <header>
                 <Link to='/'><img src="/assets/images/logo.png" className="App-logo" alt="logo" /></Link>
                 <ul>
-                    <i className='fa fa-camera camera'></i>
                     <li className='artista'>
                         <Link to='/artistas'> Artistas</Link>
                     </li>
@@ -21,10 +29,16 @@ export default function Header() {
                         <Link to='/sobre'> Sobre</Link>
                     </li>
                 </ul>
-                <Link className='retangulo' to='/login'>
-                    <p className='botaologin'>Login</p>
-                </Link>
+                {authToken ? (
+                    <button className='retangulo' onClick={handleLogout}>
+                        <p className='botaologin'>Sair</p>
+                    </button>
+                ) : (
+                    <Link className='retangulo' to='/login'>
+                        <p className='botaologin'>Login</p>
+                    </Link>
+                )}
             </header>
         </div>
-    )
+    );
 }
