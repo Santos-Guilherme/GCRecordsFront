@@ -46,6 +46,10 @@ export default function ArtistaEditar() {
 
     async function salvarAlteracoes(e) {
         e.preventDefault();
+        if (!nome || !instagram || !tiktok || !twitter|| !youtube || !spotify || !descricao) {
+            toast.warning('Todos os campos são obrigatórios!');
+            return;
+        }
         try {
             if (nomeAntigo !== nome) {
                 const artistaExistente = await artistaApi.buscarArtistaPorNome(nome);

@@ -3,7 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { buscarLogin } from '../../Api/LoginApi'; // Atualize o caminho conforme necessário
+import { buscarLogin } from '../../Api/LoginApi'; 
 import { toast } from 'react-toastify';
 
 export default function Login() {

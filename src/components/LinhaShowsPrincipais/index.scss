@@ -4,54 +4,129 @@
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
 
-    div{
-        display: flex;
+.LinhaShowsPrincipais div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 10px;
+}
+
+.LinhaShowsPrincipais p {
+    display: flex;
+    width: 200px;
+    white-space: nowrap;
+    justify-content: space-evenly;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.LinhaShowsPrincipais .nome-artista {
+    color: #fff;
+}
+
+.LinhaShowsPrincipais .img-artista {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.LinhaShowsPrincipais .show-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 58px;
+    background: #1E1D1D;
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.LinhaShowsPrincipais .linha-show {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.LinhaShowsPrincipais .linha-show > div {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .LinhaShowsPrincipais p {
+        font-size: 16px;
+    }
+
+    .LinhaShowsPrincipais .img-artista {
+        height: 120px;
+        width: 120px;
+    }
+
+    .LinhaShowsPrincipais .show-data {
+        width: 50px;
+        height: 50px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .LinhaShowsPrincipais div {
+        width: 45%;
+    }
+
+    .LinhaShowsPrincipais p {
+        font-size: 14px;
+    }
+
+    .LinhaShowsPrincipais .img-artista {
+        height: 100px;
+        width: 100px;
+    }
+
+    .LinhaShowsPrincipais .show-data {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .LinhaShowsPrincipais {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        width: 30%;
     }
 
-    p {
-        display: flex;
-        width: 200px;
-        text-wrap: nowrap;
-        justify-content: space-evenly;
-        color: #fff;
-        font-size: 18px;
-        text-align: center;
-    }
-    .nome-artista {
-        color: #fff;
+    .LinhaShowsPrincipais div {
+        width: 80%;
+        margin-bottom: 20px;
     }
 
-    .img-artista {
-        height: 150px;
-        width: 150px;
-        object-fit: cover;
-        margin-bottom: 10px;
+    .LinhaShowsPrincipais p {
+        width: auto;
+        font-size: 12px;
     }
 
-    .show-data {
-        display: flex;
-        align-items: center;
-        width: 56px;
-        height: 58px;
-        background: #1E1D1D;
-        text-wrap: wrap;
-        font-size: 15px;
+    .LinhaShowsPrincipais .img-artista {
+        height: 80px;
+        width: 80px;
     }
 
-    .linha-show {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-    }
-
-    .linha-show>div {
-        display: flex;
-        width: 200px;
-        justify-content: center;
+    .LinhaShowsPrincipais .show-data {
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
     }
 }
